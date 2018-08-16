@@ -1,0 +1,138 @@
+@import "vars"
+
+.leftMenu
+	padding: 0
+	box-shadow: 0 0 3px rgba(122,122,122,.5)
+	border-radius: 3px
+	background-color: lighten($body, 1.35%)
+
+.leftMenu-item
+	position: relative
+	list-style: none
+	font-size: .93em
+	line-height: .9
+	font-weight: 500
+	color: $darck
+	border-bottom: 1px solid lighten($gray, 10%)
+	transition: 0.25s all
+	a 
+		display: block
+		color: darken($darck, 2%)
+		padding: 11px 20px 11px 15px
+		text-decoration: none
+		border-left: none
+		&:hover
+			border-left:  5px solid $accent
+			padding-left: 10px
+			background-color: lighten($gray, 10%)
+			transition: 0.25s all
+	&:last-child 
+		border-bottom: none
+.leftMenu-item--active
+	position: relative
+	list-style: none
+	font-size: .93em
+	line-height: .9
+	font-weight: 500
+	color: $darck
+	border-bottom: 1px solid lighten($gray, 7%)
+	transition: 0.25s all
+	>a 
+		display: block
+		color: darken($darck, 2%)
+		padding: 11px 20px 11px 15px
+		text-decoration: none
+		border-left: none   
+		border-left:  5px solid $accent
+		padding-left: 10px
+		background-color: lighten($gray, 10%)
+		transition: 0.25s all
+
+.leftMenu-item-list
+	display: none
+	top: 0
+	list-style: none
+	padding-left: 0
+	border: 1px solid lighten($gray, 1%)
+	box-shadow: 0 0 3px rgba(122,122,122,.2)
+	background-color: lighten($body, 1.35%)
+	border-radius: 2px
+
+.leftMenu-item-2
+	list-style: none
+	width: 252px
+	font-size: .93em
+	line-height: .9
+	font-weight: 500
+	color: $darck
+	border-bottom: 1px solid lighten($gray, 10%)
+	transition: 0.25s all
+	&:last-child 
+		border-bottom: none
+	a 
+	display: block
+	padding: 11px 10px 11px 15px
+	width: 100%
+	color: darken($darck, 2%)
+	text-decoration: none
+	&:hover 
+		border-left: 5px solid #fc0
+		padding-left: 10px
+		background-color: #e3e3e6
+
+.leftMenu-item .leftMenu-item-list
+	position: absolute
+	z-index: 10 
+	left: 101%
+	top: 0
+	transition: 0.25s all
+
+.leftMenu-item--active .leftMenu-item-list
+	position: absolute
+	z-index: 10 
+	left: 101%
+	top: 0
+	transition: 0.25s all
+
+.leftMenu>li:hover .leftMenu-item-list
+	display: block
+	transition: 0.25s all
+
+.leftMenu-item .leftMenu-item-list:hover
+	display: block
+	transition: 0.25s all
+
+.leftMenu-item-marker::after
+	content: ""
+	position: absolute
+	border: 5px solid
+	border-color: transparent transparent transparent $gray
+	top: 50%
+	right: 0.5em
+	transform: translateY(-50%)
+	transition: 0.5s
+	transition: 0.25s all
+
+.leftMenu-item-marker:hover::after
+	right: 0.3em
+	border-color: transparent transparent transparent $accent
+	transition: 0.25s all
+
+.leftMenu-item-marker--active::after
+	content: ""
+	position: absolute
+	border: 5px solid
+	top: 50%
+	right: 0.3em
+	transform: translateY(-50%)
+	transition: 0.5s
+	border-color: transparent transparent transparent $accent
+	transition: 0.25s all
+
++media-breakpoint-down(xl)
++media-breakpoint-down(lg)
++media-breakpoint-down(md)
+	.leftMenu
+		display: none   
++media-breakpoint-down(sm)
++media-breakpoint-down(xs)

@@ -1,0 +1,101 @@
+@import "vars"
+
+.aboutus_img-wrap
+	width: 100%
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	flex-wrap: wrap
+	margin-right: 5px
+	margin-left: 5px
+
+
+.aboutus_img-link
+	width: calc(25% - 10px)
+	display: block
+	border-radius: 3px
+	background-color: #fff
+	border: 1px solid #ddd
+	box-sizing: border-box
+	padding: 3px
+	margin-bottom: 10px
+.aboutus_img-prew
+	width: 100%
+.aboutus_item
+	margin-bottom: 20px
+	h3
+		line-height: 1.35
+.aboutus_hi
+	text-align: center
+	margin: 20px 0
+	font-size: 1.4em
+	font-weight: bold
+	text-transform: uppercase
+
+.delivery
+	p
+		font-size: 16px
+		margin-bottom: .5rem
+		line-height: 1.35
+.track-wrap
+	width: 100%
+	text-align: center
+.track-img
+	width: 350px
+	height: auto
+	margin: 20px auto
+.attention
+	color: $red
+	font-weight: 500
+
+.stock_wrap
+	width: 100%
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	align-items: flex-start
+	flex-wrap: wrap	
+.stock_item-img	
+	width: 35%
+	img
+		width: 350px
+		display: block
+		margin: 0 auto		
+.stock_item-info
+	width: 60%
+	background: lighten($body, 1%)
+	border: 1px solid rgb(221, 221, 221)
+	border-radius: 4px
+	float: left
+	margin-top: 10px
+	padding: 10px
+
+
++media-breakpoint-down(xl)
++media-breakpoint-down(lg)
+	.aboutus_img-link
+		width: 160px
++media-breakpoint-down(md)
+	.stock_item-img	
+		width: 30%
+		img
+			width: 280px		
+	.stock_item-info
+	width: 60%
++media-breakpoint-down(sm)
+	.aboutus_img-link
+		width: calc(50% - 10px)
+	.track-img
+		width: 70% 
+	.stock_item-img	
+		width: 100%
+		margin-bottom: 20px
+		img
+			width: 280px		
+	.stock_item-info
+		width: 100%
+		margin-bottom: 20px
++media-breakpoint-down(xs)
+	.stock_item-img	
+		img
+			width: 80%

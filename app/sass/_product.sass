@@ -1,0 +1,611 @@
+@import "_vars"
+
+.product
+.product_wrap
+	width: 100%
+	display: flex
+	flex-direction: row
+	justify-content: flex-start
+	margin-bottom: 30px
+.product_photo
+	flex: 0 0 430px
+	margin-right: 55px
+
+.product_photo-img-wrap
+	width: 100%
+	height: 500px
+	display: table
+	margin:  0
+	padding: 0px
+	border-collapse: collapse
+	position: relative
+	overflow: hidden
+	background-color: #fff
+	border: 1px solid #eee
+
+.product_photo-img-link
+	position: relative
+	display: table-cell
+	vertical-align: middle
+	text-align: center
+	text-decoration: none
+	width: 100%
+	margin: 0px
+	padding: 0px
+	img
+		width: auto
+		max-width: 390px
+		height: auto
+		max-height: 390px
+
+
+.product_stick-disc
+	position: absolute
+	bottom: 10px
+	right: 10px
+	width: 72px
+	height: 74px
+	background: url(../img/stick_disc.png) no-repeat center
+	color: #fff
+	text-align: center
+	text-shadow: 0 1px 0 #ba3434
+	font-weight: bold
+	font-size: 1.6em
+	line-height: 74px
+	line-height: 74px
+
+.product_stick-lebel
+	display: flex
+	flex-direction: column
+	flex-wrap: wrap
+	justify-content: flex-end
+	position: absolute
+	top: 15px
+	right: -0
+
+.product_stick-lebel-item
+	background: linear-gradient(to right, #c8c8ce 1%, #a7a7aa 94%,#7c7d7f 100%)
+	background-color: $gray
+	font-size: .95em
+	text-transform: uppercase
+	color: #fff
+	text-shadow: 0px 1px 0 $darck
+	padding: 3px 15px
+	margin-bottom: 2px
+
+.product_photo-prew-list
+	width: 100%
+	display: flex
+	flex-direction: row
+	justify-content: flex-start
+	flex-wrap: wrap
+	list-style: none
+	padding: 0
+	margin: 15px 0
+
+.product_photo-prew-img
+	display: block
+	width: 82px
+	height: 82px
+	background-color: #fff
+	margin: 0 4px 4px 0
+	padding: 3px
+	background-repeat: no-repeat
+	background-size: contain
+	background-position: center center
+	border: 2px solid #eee
+	border-radius: 2px
+	cursor: pointer
+	&:hover
+		border: 2px solid $gray
+
+.product_photo-prew-img-active
+	border: 2px solid $gray
+
+.product_photo-modal
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	background: rgba(0,0,0,.5)
+	z-index: 100
+	transition: opacity .2s ease-in
+	margin: 0
+	padding: 0
+	color: $darck
+
+.product_photo-modal-wrap
+	width: 100%
+	height: 100%
+	display: flex
+	flex-direction: row
+	justify-content: flex-start
+
+
+.product_photo-modal-left
+	width: 32%
+	display: flex
+	flex-direction: row
+	justify-content: flex-end
+	align-items: center
+.product_photo-modal-right
+	width: 32%
+	display: flex
+	flex-direction: row
+	justify-content: flex-start
+	align-items: center
+.product_photo-modal-wrap-photo
+	width: 33%
+	display: flex
+	flex-direction: row
+	justify-content: center
+
+.product_photo-modal-img
+	max-width: 100%
+	margin: auto
+	max-height: 90vh
+	border: 5px solid #eee
+	box-shadow: 0 5px 15px rgba(0,0,0,.5)
+
+.product_photo-modal-left-btn
+	width: 30px
+	height: 30px
+	display: block
+	position: relative
+	border: 3px solid $body
+	border-radius: 50%
+	background-color: #333
+	margin-right: 10px
+	cursor: pointer
+	ransition: 0.25s all
+	&:before
+		content: ""
+		display: block
+		position: absolute
+		top: 3px
+		left: 5px
+		width: 0
+		height: 0
+		border: 9px solid transparent
+		border-right-color: $body
+		border-left: 0
+		z-index: 10
+		ransition: 0.25s all
+	&:hover
+		border: 3px solid $accent
+		transition: 0.25s all
+		&:before
+			border-right-color: $accent
+			ransition: 0.25s all
+
+.product_photo-modal-right-btn
+	width: 30px
+	height: 30px
+	display: block
+	position: relative
+	border: 3px solid $body
+	border-radius: 50%
+	background-color: #333
+	margin-left: 10px
+	cursor: pointer
+	transition: 0.25s all
+	&:before
+		content: ""
+		display: block
+		position: absolute
+		top: 3px
+		left: 10px
+		width: 0
+		height: 0
+		border: 9px solid transparent
+		border-left-color: $body
+		border-right: 0
+		z-index: 10
+		transition: 0.25s all
+	&:hover
+		border: 3px solid $accent
+		transition: 0.25s all
+		&:before
+			border-left-color: $accent
+			ransition: 0.25s all
+.product_photo-modal-closed
+	width: 100%
+.product_photo-modal-closed-btn
+	display: block
+	position: absolute
+	top: 10px
+	right: 20px
+	width: 25px
+	height: 25px
+	font-size: 40px
+	line-height: .6
+	text-align: center
+	color: $body
+	cursor: pointer
+	ransition: 0.25s all
+	&:hover
+		color: $accent
+		ransition: 0.25s all
+
+
+
+
+
+.product_info-wrap
+	width: 100%
+
+.product_info-preview
+	width: 100%
+	font-size: .95em
+	line-height: 1.2
+	margin-bottom: 15px
+	p
+		margin-bottom: 0
+
+.product_info-price-wrap
+	width: 100%
+
+.product_info-price-block
+	display: inline-block
+	padding: 12px 15px
+	background-color: $darck
+	border-radius: 3px
+	color: #fff
+
+.product_info-price-old
+	display: block
+	font-size: .95em
+	line-height: 1
+	text-decoration: line-through
+	color: #b8b8b8
+
+.product_info-price-new
+	display: block
+	font-size: 1.3em
+	text-transform: uppercase
+	text-shadow: 0 1px 0 $darck
+
+.product_info-price-profit
+	font-size: .9em
+	line-height: 1
+	color: $gray
+
+
+
+.product_info-buy-wrap
+	width: 100%
+	display: flex
+	flex-direction: row
+	justify-content: flex-start
+	align-items: center
+	margin-top: 20px
+	font-size: 1em
+
+.product_info-buy-order
+	width: 100%
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	align-items: center
+
+.product_info-buy-form
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	align-items: center
+	background-color: $gray
+	border-radius: 3px
+	width: 80px
+	height: 30px
+	margin-right: 10px
+	input
+		width: 40px
+		height: 24px
+		text-align: center
+		border: 1px solid $gray
+		border-radius: 2px
+	a
+		display: block
+		width: 20px
+		height: 24px
+		text-align: center
+		font-size: 1.3em
+		line-height: 1.1
+		color: #fff
+		transition: 0.25s all
+		&:hover
+			text-decoration: none
+			color: $darck
+
+
+.product-buy-btn
+	width: 155px
+	height: 40px
+	background-color: $darck
+	border: 2px solid $gray
+	border-radius: 10px
+	color: $accent
+	text-shadow: 1px 1px 1px rgba(43, 53, 69, .2)
+	font-size: 0.85em
+	font-weight: 600
+	text-transform: uppercase
+	margin-right: 10px
+	cursor: pointer
+	transition: 0.25s all
+	&:hover
+		text-shadow: 1px 1px 1px rgba(43, 53, 69, 1)
+		border: 2px solid $accent
+
+
+.product-buy-btn-fast
+	width: 155px
+	height: 40px
+	background-color: $darck
+	border: 2px solid $gray
+	border-radius: 10px
+	color: $accent
+	text-shadow: 1px 1px 1px rgba(43, 53, 69, .2)
+	font-size: 0.85em
+	font-weight: 600
+	text-transform: uppercase
+	cursor: pointer
+	transition: 0.25s all
+	&:hover
+		text-shadow: 1px 1px 1px rgba(43, 53, 69, 1)
+		border: 2px solid $accent
+		transition: 0.25s all
+
+.product_gift
+	width: 100%
+	padding: 10px 15px 15px 15px
+	margin-top: 30px
+	background-color: lighten($body, 2%)
+	border: 2px solid $gray
+	//border: 1px solid #ddd
+	border-radius: 5px
+
+	h3
+		line-height: 1
+		font-size: 1.1em
+		margin-bottom: 12px
+
+.product_gift-wrap
+	display: flex
+	flex-direction: row
+	justify-content: flex-start
+	align-items: flex-start
+
+.product_gift-img
+	width: 70px
+	padding: 2px
+	background-color: #fff
+	border: 1px solid $gray
+	border-radius: 2px
+	margin-right: 15px
+	img
+		width: 100%
+
+
+.product_gift-txt
+	font-size: .95em
+	line-height: 1.25
+	ul
+		padding-left: 0
+		margin-bottom: 5px
+		li
+			list-style: none
+	p
+		margin-bottom: 5px
+	i
+		font-size: .86em
+		margin-right: 5px
+		opacity: .7
+
+
+.product_property
+	width: 100%
+	font-size: .95em
+	line-height: 1.3
+	margin-top: 30px
+	dl
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		align-items: flex-end
+		width: 100%
+		margin-bottom: 0
+		margin-top: 3px
+		padding-right: 5px
+	dt
+		text-align: right
+	dd
+		text-align: left
+		margin-bottom: 0
+.dots
+	flex-grow: 1
+	flex-shrink: 2
+	border-bottom: 1px dotted #dee0ee
+
+.product_detail-txt
+	width: 100%
+	line-height: 1.5
+	font-size: 1em
+	padding: 15px 0
+	p
+		margin-bottom: .8rem
+	td a
+		display: block
+		color: $link
+
+.table_wrap
+	display: inline-block
+	width: 100%
+
+
+.table-w70
+	border-collapse: collapse
+	width: 70%
+	font-size: .95em
+	margin-top: 20px
+	margin-bottom: 20px
+	tr
+		background-color: lighten($gray, 17%)
+	th
+		background-color: #e0e0e1
+		border: 1px solid #ddd
+		padding: 3px 10px
+	td
+		border: 1px solid #ddd
+		padding: 3px 10px
+
+
+
+
+
+.vulkan_s
+	border-collapse: collapse
+	width: 100%
+	font-size: .95em
+	margin-top: 20px
+	margin-bottom: 20px
+	th
+		background-color: #e0e0e1
+		border: 1px solid #ddd
+		padding: 3px 10px
+	td
+		border: 1px solid #ddd
+		padding: 3px 10px
+.vezuviy_tabl
+	border-collapse: collapse
+	border: 1px solid #ddd
+	width: 100%
+	margin-top: 30px
+
+	tr:first-child
+		background-color: #e0e0e1
+		text-align: center
+		font-size: .95em
+		font-weight: bold
+	td
+		border: 1px solid #ddd
+		padding: 5px
+		font-size: .95em
+
+
++media-breakpoint-down(xl)
++media-breakpoint-down(lg)
+	.product_photo
+		flex: 0 0 300px
+		margin-right: 45px
+	.product_photo-img-wrap
+		height: 349px
+	.product_photo-img-link img
+		max-width: 270px
+		max-height: 270px
+	.product_photo-prew-img
+		width: 71px
+		height: 71px
+	.product_photo-modal-left
+		width: 29%
+	.product_photo-modal-right
+		width: 29%
+	.product_photo-modal-wrap-photo
+		width: 40%
+	.product-buy-btn
+		width: 100px
+		font-size: .8em
+		line-height: 1
+	.product-buy-btn-fast
+		width: 145px
+		font-size: .8em
+		line-height: 1
+	.table-w70
+		width: 85%
++media-breakpoint-down(md)
+	.product_info-price-block
+		display: block
+	.product_photo-modal-left
+		width: 19%
+	.product_photo-modal-right
+		width: 19%
+	.product_photo-modal-wrap-photo
+		width: 60%
+	.product_description-tab-video
+		width: 90%
+	.table_wrap
+		overflow-y: scroll
+	.table-w70
+		width: 100%
++media-breakpoint-down(sm)
+	.product_wrap
+		flex-wrap: wrap
+	.product_photo
+		flex: 0 0 400px
+		margin-left: auto
+		margin-right: auto
+	.product_photo-img-wrap
+		height: 465px
+	.product_photo-img-link img
+		max-width: 400px
+		max-height: 400px
+	.product_photo-prew-img
+		width: 76px
+		height: 76px
+	table
+		line-height: 1.35
+
+	.product_photo-modal-left
+		width: 14%
+	.product_photo-modal-right
+		width: 14%
+	.product_photo-modal-wrap-photo
+		width: 70%
+	.product-buy-btn,
+	.product-buy-btn-fast
+		width: 150px
+		font-size: .87em
+		margin-right: 10px
+	.product_info-buy-form
+		margin-right: 10px
+	.product_info-buy-wrap
+		justify-content: flex-start
++media-breakpoint-down(xs)
+	.product_photo-img-link img
+		width: 100%
+
+
+
+@media only screen and (max-width : 420px)
+	.product_photo
+		flex: 0 1 400px
+	.product_photo-img-wrap
+		height: 465px
+	.product_photo-img-link img
+		max-width: 95%
+		max-height: 95%
+	.product_photo-prew-img
+		width: 72.5px
+		height: 72.5px
+
+	.product-buy-btn,
+	.product-buy-btn-fast
+		width: auto
+		padding: 1px 15px
+		font-size: .87em
+		margin-right: 10px
+@media only screen and (max-width : 370px)
+	.product_photo-img-wrap
+		height: 420px
+	.product_info-price-block
+		width: 100%
+	.product_info-buy-wrap
+		form
+			width: 100%
+	.product_info-buy-wrap
+		flex-direction: column
+	.product-buy-btn
+		flex-basis: 100%
+	.product-buy-btn-fast
+		width: 100%
+		margin: 5px 0 0 0

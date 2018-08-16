@@ -1,0 +1,256 @@
+@import "vars"
+.list	
+	h2
+		font-size: 1.2em
+		font-weight: 400
+		margin: 15px 0 10px 0
+	.list_section-title
+		font-size: 1.4em
+		margin-top: 0
+		margin-bottom: 7px
+		font-weight: 500
+		line-height: 1.1
+.list_wrap
+	width: 100%
+	display: flex
+	flex-direction: row
+	justify-content: flex-start
+	flex-wrap: wrap
+	border-radius: 3px
+
+.list_item
+	width: 25%
+	background-color: $darkBody
+	box-sizing: border-box
+	padding: 5px
+	transition: 1s all
+.list_item-wrap
+	width: 100%
+	background-color: #fff
+	box-shadow: 0 0 3px rgba(122, 122, 122, .2)
+	border-radius: 3px
+	transition: .3s all
+	&:hover
+		box-shadow: 0 0 3px rgba(82, 66, 27, .5)
+		.list_item-img img
+			opacity: .9
+
+.list_item-img
+	width: 100%
+	height: 225px
+	position: relative
+	display: table
+	margin: 0
+	padding: 0
+
+	a
+		width: 100%
+		display: table-cell
+		vertical-align: middle
+		text-align: center
+		margin: 0
+		//padding-top: 10px
+		//padding-bottom: 10px
+		img
+			width: auto
+			max-width: 185px
+			height: auto
+			max-height: 185px
+.loader
+	position: absolute
+	z-index: 20
+	top: 0
+	left: 0
+	bottom: 0
+	right: 0
+	background-color: rgba(255,255,255,.7)
+	display: none
+
+.loader img
+	position: relative
+	left: 50%
+	top: 50%
+	margin: -32px 0 0 -32px
+
+
+.list_stiker-wrap
+	position: absolute
+	top: 10px
+	right: -1px
+	display: flex
+	flex-direction: column
+.list_stiker-leibl
+	font-size: .95em
+	line-height: 1.5
+	text-transform: uppercase
+	color: #fff
+	text-shadow: 0 1px 0 #4f5a6c
+	padding: 0 12px
+	margin-bottom: 2px
+
+.lst-new
+	//background-color: #c8c8ce
+	//background: linear-gradient(90deg, rgba(79, 90, 108, 0.8) 0%, rgba(79, 90, 108, 1) 85.91%, rgba(55, 63, 77, 1) 94.05%)
+	background: linear-gradient(to right,#c8c8ce 1%,#a7a7aa 94%,#7c7d7f 100%)
+
+.lst-hit
+	background: linear-gradient(90deg, rgba(255, 162, 0, 0.9) 0%, rgba(255, 139, 0, 1) 95.44%, rgba(172, 96, 11, 1) 98.41%)
+
+.list_disc
+	position: absolute
+	bottom: 3px
+	right: 7px
+	display: block
+	width: 55px
+	height: 57px
+	background: url(img/stick_disc.png) no-repeat center
+	background-size: 55px 57px
+	color: #fff
+	text-align: center
+	text-shadow: 0 1px 0 #ba3434
+	font-weight: 700
+	font-size: 1.2em
+	line-height: 55px
+.list_item-title
+	width: 100%
+	min-height: 36px
+	overflow: hidden
+	display: block
+	font-size: 1.17em
+	font-weight: bold
+	margin-bottom: .5rem
+	a
+		width: 100%
+		height: 100%
+		display: block
+		color: #504f60
+		text-decoration: none
+		padding: 0 10px
+		font-weight: 500
+		font-size: .9em
+		line-height: 1.1
+		text-align: center
+
+.list_item-offer-wrap
+	width: 100%
+	height: 50px
+	display: flex
+	flex-direction: row
+	justify-content: flex-start
+	background-color: #504f60
+	padding: 7px 15px
+	border-radius: 0 0 2px 2px
+
+.list_item-offer
+	width: 60%
+
+.list_item-offer-price
+	color: #fff
+	line-height: 1
+	font-size: 1.05em
+	padding-bottom: 4px
+
+.list_item-offer-price-old
+	display: block
+	line-height: 1
+	font-size: .9em
+	color: $accent
+	text-decoration: line-through
+.list_item-offer-price-null
+	line-height: 1
+	font-size: .9em
+	font-weight: 400
+	color: $accent
+	text-transform: uppercase
+
+
+.list_buy
+	width: 40%
+	display: flex
+	justify-content: flex-end
+
+.list_buy-btn
+	border: 2px solid $accent
+	border-radius: 15px
+	background-color: $accent
+	font-size: .95em
+	color: #504f60
+	padding: 1px 10px
+	cursor: pointer
+	transition: .25s all
+	&:hover 
+		color: $accent
+		background-color: #504f60
+
+.categoru_describe
+	font-size: 1em
+	line-height: 1.5
+	text-align: justify
+	margin-top: 15px
+.to_basket
+	color: #fff
+
+@media only screen and (max-width : 1140px)
+	.list_item-img
+		height: 200px
+	.list_item-img a img
+		max-width: 162px
+		max-height: 162px
+	.list_item-title a
+		font-size: .87em
+	.list_item-offer-price-null
+		font-size: .8.5em
+		line-height: 1.1
+
+@media only screen and (max-width : 992px)
+	.list_item
+		width: 33.3%
+
+@media only screen and (max-width : 992px)
+	.list_item
+		width: 50%
+	.list_item-img
+		height: 190px
+
+@media only screen and (max-width : 500px)
+	.list_item-img
+		height: 180px
+	.list_item-img a img
+		max-width: 158px
+		max-height: 158px
+	.list_item-title a
+		font-size: .8em
+	.list_item-offer-price
+		font-size: 1em
+
+@media only screen and (max-width : 460px)
+	.list_item-img
+		height: 170px
+	.list_item-img a img
+		max-width: 150px
+		max-height: 150px
+	.list_item-title a
+		font-size: .75em
+	.list_item-offer-wrap
+		padding: 7px 10px
+	.list_item-offer-price
+		font-size: .9em
+	.list_item-offer-price-old
+		font-size: .82em
+
+@media only screen and (max-width : 400px)
+	.list_item
+		width: 100%
+	.list_item-img
+		height: 210px
+	.list_item-img a img
+		max-width: 190px
+		max-height: 190px
+	.list_item-title a
+		font-size: 1.1em
+	.list_item-offer-wrap
+		padding: 7px 15px
+	.list_item-offer-price
+		font-size: 1.1em
+	.list_item-offer-price-old
+		font-size: .9em

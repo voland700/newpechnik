@@ -1,0 +1,26 @@
+@import "vars"
+.main_title
+	font-size: 2em
+	margin: 17px 0 5px 0
+	line-height: 1.2
+	font-weight: 600
+.breadcrumb-list
+	list-style: none
+	padding-left: 0
+	line-height: 1.25
+	margin-bottom: 20px
+.breadcrumb-item
+	display: inline-block
+	color: lighten($darck, 15%)
+	a 
+		display: block
+		color: $darck
+		padding-right: 5px
+		i 
+			margin-left: 10px
+			font-size: .9em
+			color: $gray
+
+@media only screen and (max-width : 768px)
+	.breadcrumb-list
+		line-height: 1.4

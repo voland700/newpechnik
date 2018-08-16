@@ -1,0 +1,74 @@
+@import "vars"
+
+.section-wrap
+	width: 100%
+	display: flex
+	flex-direction: row
+	justify-content: flex-start
+	flex-wrap: wrap	
+	border-radius: 3px
+	margin-bottom: 30px
+.section_item
+	width: 25%
+	box-sizing: border-box
+	background-color: $darkBody
+	padding: 5px
+	transition: 1s all
+.section_elem
+	width: 100%
+	padding: 15px
+	background-color: #fff
+	box-shadow: 0 0 3px rgba(122, 122, 122, .2)
+	border-radius: 3px
+	transition: .3s all
+	cursor: pointer
+	img
+		display: block
+		width: auto
+		height: 160px
+		margin: 0 auto
+	&:hover
+		box-shadow: 0 0 6px rgba(137, 122, 86, .5)
+		img
+			opacity: .9
+
+.section_elem-title
+	width: 100%
+	margin-bottom: 0
+	vertical-align: middle
+	font-family: "Times New Roman"
+	font-size: 1.2em
+	line-height: 1
+	font-weight: 600
+	background-color: #fc0
+	text-align: center
+	overflow: hidden
+	margin-top: 15px
+	a
+		width: 100%
+		height: 100%
+		display: block
+		padding: 10px 10px
+		color: #333
+		text-decoration: none
+
+@media only screen and (max-width : 992px)
+	.section_elem img
+		max-height: 130px
+		max-width: 130px
+	.section_elem-title
+		font-size: 1em
+
+@media only screen and (max-width : 768px)
+	.section_item
+		width: 50%
+
+@media only screen and (max-width : 365px)
+	.section_item
+		width: 100%
+
+	.section_elem img
+		max-height: 150px
+		max-width: 150px
+	.section_elem-title
+		font-size: 1.2em

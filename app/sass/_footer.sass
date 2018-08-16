@@ -1,0 +1,270 @@
+@import "vars"
+
+footer
+	margin-top: 70px
+
+.foot_soc
+	width: 100%
+	display: flex
+	flex-direction: row
+	align-items: center
+	justify-content: center
+	flex-wrap: wrap
+	background-color: $darck
+	height: 50px
+	margin-bottom: 10px
+.foot_soc-btnBlok
+	display: block
+	height: 40px	
+	text-align: center
+.foot_soc-btn
+	display: inline-block
+	width: 40px
+	height: 40px
+	margin-right: 2px
+	position: relative
+	cursor: pointer
+
+.foot
+	width: 100%
+	border-top: 1px solid darken($gray, 2%)
+	border-bottom: 1px solid darken($gray, 2%)
+	background-color: $gray
+	color: $darck
+	padding-top: 30px
+	padding-bottom: 30px
+
+.foot_wrap
+	width: 100%
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	flex-wrap: wrap
+.foot_left
+	width: 50%
+.foot_left-wrap
+	width: 100%
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	flex-wrap: wrap
+	//padding-right: 35px
+	padding-bottom: 15px
+
+.foot_logo
+	flex-shrink: 1
+.foot_logo-img
+	width: 120px
+	svg 
+		width: 100px
+		display: block
+		margin: 0 auto 7px auto
+		transition: all .25s
+.foot_logo-img-hover:hover 
+	svg
+		#y_logo
+			fill: darken($accent, 7%)
+			transition: all .25s
+		#path4770
+			fill: lighten($darck, 2%)
+			transition: all .25s
+		#path4776
+			fill: darken(#FF0000, 5%)
+			transition: all .25s
+	.foot_logo-title
+		color: $darck
+
+
+.foot_logo-title
+	font-size: .9em
+	line-height: .94
+	font-weight: 700
+	color: $darck
+	text-transform: uppercase
+	text-align: center
+	transition: .3s
+.foot_menu-wrap
+	flex-grow: 1
+	display: flex
+	flex-direction: row
+	justify-content: space-around
+	flex-wrap: wrap
+	flex-shrink: 0
+
+
+
+
+.foot_menu	
+	i
+		color: lighten($darck, 15%)
+		margin-right: 7px	
+		font-size: 1.2em
+	h3
+		font-size: 1.17em
+		line-height: 1
+		margin-bottom: .3rem
+
+.foot_menu-list
+	list-style: none
+	padding-left: 0
+	padding-top: 2px
+	border-top: 1px solid darken($gray, 5%)
+	a 
+		display: block
+		color: $darck
+		font-size: .95em
+		line-height: 1.5
+		font-weight: 500
+		text-decoration: none
+		transition: all .25s
+		&:hover
+			//color: lighten($darck, 15%)
+			text-decoration: underline
+
+
+.foot_right
+	width: 50%
+.foot_right-wrap
+	width: 100%
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	flex-wrap: wrap
+
+
+
+.foot_txt
+	width: 50%
+	font-size: .98em
+	line-height: 1.5
+	padding-left: 15px
+	padding-right: 15px
+	text-align: justify
+
+	font-family: 'Open Sans', Helvetica, Arial
+	font-size: 14px
+	line-height: 1.42857143
+	color: #4f5a6c
+.foor_info-wrap
+	width: 50%
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	flex-wrap: wrap
+.foot_info
+	width: 100%	
+	padding-left: 15px
+
+.foot_info-phone
+	font-size: 1.3em
+	font-weight: 600
+	line-height: 1
+	font-style: italic
+	margin-bottom: 7px
+	i 
+		margin-right: 5px
+
+.foot_info_time
+	line-height: 1	
+	font-style: italic
+	font-size: .85em
+	margin-bottom: 7px
+	i 
+		margin-right: 7px
+	
+.foot_info_title
+	font-size: 1.1em
+	font-weight: 400
+	line-height: 1
+	margin-bottom: 7px
+.foot_info-tell
+	font-size: 1.1em
+	line-height: 1
+	margin-bottom: 5px
+	i 
+		margin-right: 7px
+
+.foot_info-address
+	font-style: italic
+	line-height: 1
+	margin-bottom: 15px
+	font-size: .85em
+	i 
+		margin-right: 12px
+
+.foot_icon-wrap
+	width: 100%
+	text-align: right
+
+.foot_icon
+	width: 45px
+	height: 28px
+	display: inline-block
+	margin-right: 2px
+
+
+
+
+
+#upbutton
+	display: none
+	width: 0
+	height: 0
+	border-left: 30px solid transparent
+	border-right: 30px solid transparent
+	border-bottom: 30px solid $darck
+	opacify: .4
+	cursor: pointer
+	bottom: 30px
+	right: 30px
+	cursor: pointer  
+	position: fixed
+	z-index: 999
+
+
++media-breakpoint-down(xl)
++media-breakpoint-down(lg)
+	#upbutton
+		border-left: 25px solid transparent
+		border-right: 25px solid transparent
+		border-bottom: 25px solid $darck
+		right: 15px
++media-breakpoint-down(md)
+	.foot_txt
+		display: none
+	.foot_logo
+		display: none
+	.foot_right-wrap
+		height: 90%
+	.foor_info-wrap
+		width: 100%
+	#upbutton
+		right: 15px
+		bottom: 15px
++media-breakpoint-down(sm)
+	.foot_icon-wrap
+		display: none
+	.foot_left
+		width: 100%
+		order: 2
+	.foot_right
+		width: 100%
+		order: 1
+	.foot_info
+		padding-left: 0
+		text-align: center
+		margin-bottom: 20px
+		border-bottom: 1px solid darken($gray, 5%)
+
+	.foot_menu
+		width: auto
+	.foot_menu-list
+		border-top: none
++media-breakpoint-down(xs)
+	.foot_menu-list
+		padding-bottom: 25px
+		border-bottom: 1px solid darken($gray, 5%)
+	.foot_info		
+		margin-top: 10px
+		text-align: center
+

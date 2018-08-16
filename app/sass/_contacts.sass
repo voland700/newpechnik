@@ -1,0 +1,133 @@
+@import "vars"
+
+.shop__item
+	width: 100%
+	height: auto
+	border-top: 1px solid $gray
+	padding: 20px 15px
+
+.shop_title 
+	font-size: 1.5em
+	font-weight: 600	
+	margin-top: 10px
+	margin-bottom: 15px
+
+.shop_title a 
+	color: #4f5a6c
+	transition: 0.3s
+
+.shop_title a:hover 	
+	opacity: 0.8
+	transition: 0.3s
+
+.shop__wrap 
+	width: 100%
+	height: auto
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	align-items: flex-start
+	margin-top: 15px
+	margin-bottom: 20px
+ 
+.shop__info 
+	width: 40%
+	height: auto
+
+.shop__info_link 
+	width: 20%
+	height: 90px
+	display: flex
+	flex-direction: column
+	align-items: center
+
+.shop__info_txt 
+	font-size: 1em
+	font-weight: 500
+	margin-bottom: 10px
+
+.shop_row 
+	font-size: 1.3em
+	margin-bottom: 5px
+
+.shop_row i 
+	margin-right: 10px
+	color: #69768c
+
+
+.shop__adres, .shop__time 
+	font-size: 1.1em
+
+.shop__adres i, .shop__time i
+	margin-right: 10px
+
+.shop__shema 
+	max-width: 100%
+	padding: 3px
+	background-color: #fff
+	border: 1px solid #ddd
+	border-radius: 4px
+
+.shop__shema img
+	width: 100%
+
+
+.Shop__yshema-wrap
+	width: 100%
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	margin-bottom: 25px
+
+.Shop__yshema-item
+	width: 50%
+.Shop__yshema-item:nth-child(1)
+	margin-right: 2px
+.Shop__yshema-item:nth-child(2)
+	margin-left: 2px
+
+.Shop__yshema-item img
+	width: 100%
+	padding: 3px
+	background-color: #fff
+	border: 1px solid #ddd
+	border-radius: 4px
+.shop__item-elem 
+	padding: 20px 0px
+.shop__titel-shema 
+	font-size: 1.3em
+	font-weight: 600
+	margin-top: 25px
+	margin-bottom: 10px
+	color: $darck	
+.main_phone 
+	font-size: 1.7em
+	font-weight: 600
+	padding: 5px 15px
+.main_phone i 
+	margin-right: 10px
+	opacity: .8
+@media only screen and (max-width:768px) 
+	.Shop__yshema-wrap
+		flex-wrap: wrap
+	.Shop__yshema-item
+		width: 100%
+		margin-bottom: 10px
+	.Shop__yshema-item:nth-child(1)
+		margin-right: 0
+	.Shop__yshema-item:nth-child(2)
+		margin-left: 0
+
+@media only screen and (max-width : 768px) 
+	.shop__wrap 
+		flex-direction: column
+		justify-content: space-between	
+	.shop__info
+		width: 100%
+	.shop__info_link 
+		width: 100%		
+
+@media only screen and (max-width : 320px) 
+	.shop__item 
+		min-width: 320px
+

@@ -1,0 +1,86 @@
+@import "vars"
+
+.examples
+	display: flex
+	flex-direction: row
+	flex-wrap: wrap
+	width: 100%
+	margin-bottom: 20px
+	margin-right: -1px
+	margin-left: -1px
+
+.examples-item 
+	width: calc(10.9315% - 2px)
+	display: block
+	padding: 4px
+	margin: 2px
+	margin: 2px
+	line-height: 1.42857143
+	background-color: lighten($body, 2%)
+	border: 1px solid #ddd
+	border-radius: 4px
+	box-sizing: border-box
+	transition: all .2s ease-in-out
+	display: inline-block
+	transition: .3s ease-in-out
+	&:hover
+		.examples-img
+			filter: brightness(80%)
+			transition: .3s ease-in-out
+
+.examples-img
+	width: 100%
+	height: auto
+
+.examples-txt
+	line-height: 1.5
+	font-size: 1em
+	text-align: justify
+	text-indent: 25px
+	a 
+		color:  $darck
+		font-style: italic
+.works_item
+	margin-bottom: 25px
+	h2 
+		font-size: 25px
+		margin-bottom: .8rem    
+
+.works_item-link
+	display: block
+	color: $darck
+	transition: all .3s
+	&:hover
+		color: darken($darck, 2%)
+
+.works_back
+	color: $darck
+	font-style: italic
+	opacity: .9
+	transition: .3s
+	i 
+		margin-right: 7px
+	&:hover 
+		color: $darck
+		opacity: 1
+
++media-breakpoint-down(xl)
++media-breakpoint-down(lg)
+	.examples-item 
+		width: calc(14.0707% - 2px)
++media-breakpoint-down(md)
+	.examples-item 
+		width: calc(16.379% - 2px)
++media-breakpoint-down(sm)
+	.examples-item 
+		width: calc(24.6109% - 2px)
+	.works_item-link
+		line-height: 1.2			
++media-breakpoint-down(xs)
+	.examples-item 
+		width: calc(32.777% - 2px)
+@media only screen and (max-width : 390px)
+	.examples
+		justify-content: space-around
+	.examples-item 
+		width: calc(49% - 2px)
