@@ -1,14 +1,21 @@
 $(function() {
+
+	if (document.getElementById('bx_1847241719_199')){
+		let parentCat = document.getElementById('bx_1847241719_199');	
+		let chaildCat = parentCat.getElementsByTagName('h3')[0];
+		let sp = document.createElement('span');
+		sp.className = 'oferTxt';
+		sp.textContent = "Гарантия лучшей цены";
+		parentCat.insertBefore(sp, chaildCat);
+	}
+
+
+
+
+
 	// -- Верхнее меню
-	//let navBtn = document.getElementById('navBtn');
-
-	$('#navBtn').on('click touchstart', function() {
-//alert('КЛИК');
-
-console.log($('#navTopList').css('display'));
 
 
-	});
 
 
 
