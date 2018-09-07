@@ -171,7 +171,7 @@
 	<div class="container">
 		<div class="search_area-wrap">
 			<div class="btn_catalog-wrap">
-				<batton class="btn_catalog">Каталог товаров<span></span></batton>
+				<a class="btn_catalog">Каталог товаров<span></span></a>
 			</div>
 			<div class="search_wrap">
 				<form action="/search/" class="form-wrap">  
@@ -458,8 +458,7 @@
 
 
 
-					 <input class="product-buy-btn-fast" type="submit" name="oneclickOrder" value="Купить в 1 клик" onclick="oneclickPopup();">
-
+					 <a class="product-buy-btn-fast" href="#"><span>Быстрая покупка</span></a>
 				 </div>
 
 
@@ -480,8 +479,8 @@
 						 </div>
 					 </div>
 				 </div>
-
-				 <div class="product_property">
+<!-- Не роходит валидацию - w3.org
+				 <div class="product_property"> 
 					 <dl><dt>Код товара:</dt><span class="dots"></span><dd>   23464</dd></dl>
 					 <dl><dt>Производитель:</dt><span class="dots"></span><dd>    JOTUL</dd></dl>
 					 <dl><dt>Страна производства:</dt><span class="dots"></span><dd>  Норвегия</dd></dl>
@@ -492,7 +491,24 @@
 					 <dl><dt>Гарантия производителя: </dt><span class="dots"></span><dd>  25 лет</dd></dl>
 					 <dl><dt>Мощность (кВт)</dt><span class="dots"></span><dd> 25</dd></dl>
 					 <dl><dt>Вес (кг): </dt><span class="dots"></span><dd> 106</dd></dl>
-				 </div>
+				 </div>  -->
+
+				<div class="product_property">
+					<div class="product_property-item"><span class="definition">Производитель:</span><span class="dots"></span><span class="value">Везувий</span></div>
+					<div class="product_property-item"><span class="definition">Страна производства:</span><span class="dots"></span><span class="value">Россия</span></div>
+					<div class="product_property-item"><span class="definition">Гарантия производителя:</span><span class="dots"></span><span class="value">30 лет</span></div>
+					<div class="product_property-item"><span class="definition">Высота (мм):</span><span class="dots"></span><span class="value">700</span></div>
+					<div class="product_property-item"><span class="definition">Диаметр дымохода (мм):</span><span class="dots"></span><span class="value">115-120</span></div>
+					<div class="product_property-item"><span class="definition">Ширина (мм):</span><span class="dots"></span><span class="value">510</span></div>
+					<div class="product_property-item"><span class="definition">Глубина (мм):</span><span class="dots"></span><span class="value">760</span></div>
+					<div class="product_property-item"><span class="definition">Масса камней (кг):</span><span class="dots"></span><span class="value">180</span></div>
+					<div class="product_property-item"><span class="definition">Топиться:</span><span class="dots"></span><span class="value">Из смежного помешения</span></div>
+					<div class="product_property-item"><span class="definition">Объем парильного помещения 2 (м3):</span><span class="dots"></span><span class="value">от 12 до 24 м3</span></div>
+				</div>
+
+
+
+
 			 </div><!-- END IMG and INFO -->
 
 		 </div>
