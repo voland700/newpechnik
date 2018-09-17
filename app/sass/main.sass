@@ -1,7 +1,6 @@
 @import "vars"  
 @import "fonts"
 @import "libs"
-@import "font-awesome-min"
 @import "jquery-fancybox-min"
 ::placeholder
 	color: #666
@@ -65,7 +64,9 @@ body
 		color: $darck
 		text-decoration: none
 		transition: all .25s
-
+	&:not([href]):not([tabindex])
+		color: #fff
+	
 .topnav-list
 	display: flex
 	flex-direction: row
