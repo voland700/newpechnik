@@ -1,0 +1,145 @@
+@import "vars"
+
+.modal
+	width: 100%
+	height: 100%
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	outline: 0
+	background-color: rgba($darck, .8)
+	z-index: 101
+
+
+@keyframes fadeIn
+	from
+		opacity: 1
+	to
+		opacity: 0
+		
+.modal-closed
+	animation-duration: 1.5s
+	animation-fill-mode: both
+	animation-name: fadeIn
+	display: none
+
+.modal-open
+	display: block
+.modal__wrap
+	width: 100%
+	height: 100%
+	display: flex
+	flex-direction: row
+	justify-content: center
+	align-items: center
+	flex-wrap: wrap
+	margin: auto
+	color: #555
+.modal__content
+	display: block
+	width: 850px
+	height: auto
+	background-color: $body
+	border: 2px solid rgba($darck, .9)
+	border-radius: 10px	
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
+.modal__content-header
+	width: 100%
+	height: 50px
+	display: flex
+	justify-content: flex-end
+	align-items: center
+	span 
+		font-size: 2em
+		color: $darck
+		margin-right: 25px
+		transition: color .25s ease
+		cursor: pointer
+		&:hover
+			color: $accent
+.modal__content-wrap
+	padding: 15px
+	border-top: 1px solid darken($body, 10%)
+	border-bottom: 1px solid darken($body, 10%)
+	width: 100%
+	display: flex
+	flex-direction: row
+	justify-content: space-around
+	flex-wrap: wrap
+.modal__content-p
+	width: 
+.modal__content-ul
+	width: 60%
+	ul
+		//list-style: none
+		padding-left: 20px
+
+
+.modal__content-img
+	width: 30%
+	img 
+		width: 100%
+.modal__content-footer
+	width: 100%
+	height: 60px
+	display: flex
+	justify-content: flex-end
+	align-items: center
+.modal__content-btn
+	display: block
+	padding: 5px 10px
+	font-size: 1em
+	color: #fff
+	background-color: $darck
+	border-radius: 5px
+	margin-right: 25px
+	transition: all .25s ease
+	box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.4)
+	cursor: pointer
+	&:hover
+		color: $accent
+		box-shadow: 0px -1px 1px 0px rgba(0,0,0,0.2)
+
+@keyframes bounceInDown 
+	from,
+	60%,
+	75%,
+	90%,
+	to 
+		animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
+	0%     
+		transform: translate3d(0, -3000px, 0)
+	60% 
+		transform: translate3d(0, 25px, 0)
+	75% 
+		opacity: 1
+		transform: translate3d(0, -10px, 0)
+	90% 
+		transform: translate3d(0, 5px, 0)
+	to 
+		transform: translate3d(0, 0, 0)
+.modalUp 
+	animation-duration: 1s
+	animation-fill-mode: both
+	animation-name: bounceInDown
+
+
+
+
+
+
+@media only screen and (max-width : 1000px)
+	.modal__content
+		width: 800px
+@media only screen and (max-width : 900px)
+	.modal__content
+		width: 90%
+@media only screen and (max-width : 600px)
+	.modal__content-header span
+		font-size: 3rem
+	.modal__content-ul
+		width: 100%
+	.modal__content-img
+		width: 60%

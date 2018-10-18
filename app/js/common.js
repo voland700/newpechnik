@@ -84,10 +84,45 @@ $(function() {
 
 
 
+	let modalShow=document.getElementById('modalShow');
+
+	modalShow.onclick = function() {
+		let modal = document.getElementById('modal');
+		let modalTopBtn = document.getElementById('modalTopBtn');
+		let modalBottomBtn = document.getElementById('modalBottomBtn');
+		let modalWindow = document.getElementById('modalWindow');
 
 
+		if(modal.classList.contains('modal-closed')){
+			modal.classList.remove('modal-closed');
+			modal.classList.add('modal-open');
+			if(!modalWindow.classList.contains('modalUp')){
+				modalWindow.classList.add('modalUp');
+				}			
+			}
 
 
+		modalTopBtn.onclick = function() {
+			if(modal.classList.contains('modal-open')){
+				modal.classList.remove('modal-open');
+				modal.classList.add('modal-closed');
+			}
+			if(!modalWindow.classList.contains('modalUp')){
+					modalWindow.classList.remove('modalUp');
+			}
+		}
+
+		modalBottomBtn.onclick = function() {
+			if(modal.classList.contains('modal-open')){
+				modal.classList.remove('modal-open');
+				modal.classList.add('modal-closed');
+			}
+			if(!modalWindow.classList.contains('modalUp')){
+					modalWindow.classList.remove('modalUp');
+			}	
+		}
+
+	}
 
 
 
