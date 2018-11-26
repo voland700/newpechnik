@@ -8,7 +8,7 @@
 
 .video-responsive iframe,
 .video-responsive object,
-.video-responsive embed 
+.video-responsive embed
 	position: absolute
 	top: 0
 	left: 0
@@ -20,7 +20,7 @@
 	margin-right: auto
 	margin-left: auto
 
-.img-thumbnail 
+.img-thumbnail
 	display: inline-block
 	max-width: 100%
 	height: auto
@@ -32,17 +32,17 @@
 	transition: all .2s ease-in-out
 
 .video-responsive
-	position: relative 
-	padding-bottom: 56.25% 
+	position: relative
+	padding-bottom: 56.25%
 	height: 0
-	overflow: hidden 
+	overflow: hidden
 
-.video-responsive iframe, 
-.video-responsive object, 
-.video-responsive embed 
-	position: absolute 
+.video-responsive iframe,
+.video-responsive object,
+.video-responsive embed
+	position: absolute
 	top: 0
-	left: 0 
+	left: 0
 	width: 100%
 	height: 100%
 .w100
@@ -59,7 +59,22 @@
 	p, li
 		line-height: 1.5
 
-.stock_a 
+.video_block
+	width: 100%
+	display: flex
+	margin-top: 10px
+	margin-bottom: 20px
+.video_block-item
+	width: 70%
+	margin: 0 auto
+	padding: 3px
+	background-color: #fff
+	border-radius: 3px
+
+
+
+
+.stock_a
 	position: relative
 	margin: 0 100px
 	padding: 10px 0
@@ -67,7 +82,7 @@
 	border: 1px solid #ddd
 	border-radius: 4px
 
-.stock_b 
+.stock_b
 	position: relative
 	margin: 15px 0 35px 0
 	padding: 10px 0
@@ -76,15 +91,15 @@
 	border-radius: 4px
 	box-shadow: 0 0 2px rgba(122,122,122,0.5)
 
-.stock_a p 
+.stock_a p
 	padding-left: 70px
-	
 
-.stock_b .stock_b--txt 
+
+.stock_b .stock_b--txt
 	padding: 0 10px 0 90px
-	
 
-.stock_b--existence 
+
+.stock_b--existence
 	display: inline-block
 	width: 100%
 	background-image: url(/upload/img/fonbg.png)
@@ -93,31 +108,31 @@
 	box-shadow: 0 0 2px rgba(122,122,122,0.5)
 	margin-top: 10px
 
-.stock_b--existence-txt 
+.stock_b--existence-txt
 	padding: 15px 10px 15px 10px
 	margin-bottom: 0
 	font-size: 16px
 	font-weight: 500
 	text-align: center
 
-.stock_b ul 
+.stock_b ul
 	padding-left: 100px
 	list-style-type: none
 
-.stock_b li .fa-check 
+.stock_b li .fa-check
 	color: #C8C8CE
 	padding-right: 9px
 
-.stock_a ul 
+.stock_a ul
 	padding-left: 95px
-	
 
-.img_stock 
+
+.img_stock
 	position: absolute
 	left: 10px
 	top: -9px
 
-.topki_z 
+.topki_z
 	width: 97%
 	height: 283px
 	margin: 0 0 0 20px
@@ -129,18 +144,18 @@
 	font-size: 20px
 	text-align: center
 
-.stock_a li 
+.stock_a li
 	list-style: none
 
-.stock_a li .fa-check 
+.stock_a li .fa-check
 	color: #C8C8CE
 	padding-right: 7px
 
-.serticon-icon 
+.serticon-icon
 	-webkit-box-shadow: 0 0 3px rgba(122,122,122,.5)
 	box-shadow: 0 0 3px rgba(122,122,122,.5)
 
-.serticon-titel 
+.serticon-titel
 	padding-left: 10px
 .sert-tbl
 	a
@@ -163,7 +178,7 @@
 	color: #929295
 	line-height: 15px
 
-.vse_zaeblo_wrap 
+.vse_zaeblo_wrap
 	width: 100%
 	background-image: url(/upload/img/fonbg.png)
 	border: 1px solid #f6763e
@@ -174,14 +189,14 @@
 	font-size: 1.05em
 	font-weight: 500
 	line-height: 1.12
-	.diller_jotul 
+	.diller_jotul
 		font-size: 1.4em
 		margin-top: 0
 		margin-bottom: 5px
 .vse_zaeblo-title
 	font-size: 1.8em
 	font-weight: 600
-.vse_zaeblo li 
+.vse_zaeblo li
 	list-style: none
 
 .vse_zaeblo li i
@@ -204,7 +219,7 @@
 .morsoinfo-img
 	width: 165px
 	height: auto
-	margin: auto 15px 
+	margin: auto 15px
 .morsosee-txt
 	width: auto
 	margin: auto
@@ -230,15 +245,19 @@
 		font-size: 1em
 	.oferTxt
 		display: none
-
-@media only screen and (max-width:768px) 
-	.sert-tbl 
+	.video_block-item
+		width: 80%
+	.video_block-item
+		width: 100%
+@media only screen and (max-width:768px)
+	.sert-tbl
 		display: none
+	.video_block-item
+		width: 100%
 @media only screen and (max-width : 500px)
 	.morsoinfo_wrap
-		display: none 
+		display: none
 
-@media only screen and (max-width : 480px) 
-	.stock_a 
+@media only screen and (max-width : 480px)
+	.stock_a
 		margin: 0
-		
