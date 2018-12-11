@@ -242,6 +242,8 @@
 
 .product_info-price-wrap
 	width: 100%
+	display: flex
+	justify-content: flex-start
 
 .product_info-price-block
 	display: inline-block
@@ -267,6 +269,94 @@
 	font-size: .9em
 	line-height: 1
 	color: $gray
+
+.product_info-motivation-wrap
+	display: flex
+	flex-basis: 50%
+	flex-grow: 2
+	justify-content: center
+	align-items: center
+	padding-left: 15px
+	padding-right: 15px
+
+
+
+.motivation-wrap
+	position: relative
+	width: 100%
+	cursor: pointer
+
+
+.motivation-link
+
+	color: $link
+	font-size: .95em
+	font-style: italic
+	line-height: 1.2
+	padding: 0 0 5px 15px
+.motivation-block
+	display: block
+	position: absolute
+	overflow-y: hidden
+	height: auto
+	right: 0
+	background-color: #fff
+	border: 1px solid $accent
+	border-radius: 5px
+	padding: 15px
+	z-index: 10
+	box-shadow: 0 0 10px rgba(122,122,122,.8)
+	&:hover
+		display: block
+	h3
+		font-size: .965em
+		margin-top: 0
+		margin-bottom: 1rem
+	p
+		font-style: italic
+		font-size: .9em
+		line-height: 1.35
+		margin-top: 0
+    margin-bottom: 1rem
+.motivation-price
+	font-weight: 500
+	color: darken($darck, 3%)
+.motivation-p
+	margin-bottom: .1rem
+.motivation-phone
+	display: block
+	white-space: nowrap
+	font-size: .93em
+	line-height: 1.2
+	color: $darck
+	font-weight: 500
+	transition: color .3s ease
+	&:hover
+		color: $link
+		text-decoration: none
+.motivation-btn
+	display: block
+	width: 150px
+	margin: 15px auto 5px auto
+	padding-top: 8px
+	padding-bottom: 8px
+	border: 2px solid $gray
+	background-color: $body
+	color: $darck
+	border-radius: 7px
+	text-align: center
+	font-size: .75em
+	text-transform: uppercase
+	line-height: 1em
+	font-weight: 600
+	transition: .3s ease
+	&:hover
+		text-decoration: none
+		color: $darck
+		border-color: $accent
+		box-shadow: 0 0 6px rgba(122,122,122,.1)
+		color: darken($darck, 3%)
+
 
 .product_info-buy-wrap
 	width: 100%
@@ -349,14 +439,14 @@
 	text-decoration: none
 	//transition: 0.25s all
 	span
-		margin: auto		
+		margin: auto
 	&:hover
 		//text-shadow: 1px 1px 1px rgba(43, 53, 69, 1)
 		border: 2px solid $accent
 		text-decoration: none
 		transition: 0.25s all
 
-		span 
+		span
 			color: $accent
 			text-decoration: none
 
@@ -444,7 +534,7 @@
 	td a
 		display: block
 		color: $link
-	table 
+	table
 		overflow-x: hidden
 
 .table_wrap
@@ -557,6 +647,16 @@
 		width: 19%
 	.product_photo-modal-wrap-photo
 		width: 60%
+	.product_info-price-wrap
+		flex-wrap: wrap
+	.product_info-motivation-wrap
+		padding: 0
+		margin: 15px 0 10px 0
+	.motivation-link
+		padding-left: 0
+
+
+
 	.product_description-tab-video
 		width: 90%
 	.table_wrap
@@ -578,9 +678,12 @@
 	.product_photo-prew-img
 		width: 76px
 		height: 76px
+	.motivation-link
+		padding-left: 10px
+	.motivation-block
+		width: 350px
 	table
 		line-height: 1.35
-
 	.product_photo-modal-left
 		width: 14%
 	.product_photo-modal-right
@@ -599,7 +702,16 @@
 +media-breakpoint-down(xs)
 	.product_photo-img-link img
 		width: 100%
+@media only screen and (max-width : 500px)
+	.product_info-price-wrap
+		flex-direction: column
+	.product_info-motivation-wrap
 
+		width: 100%
+	.motivation-link
+		padding-left: 0
+	.motivation-block
+		width: 100%
 
 
 @media only screen and (max-width : 420px)

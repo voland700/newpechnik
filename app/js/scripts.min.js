@@ -1,7 +1,7 @@
 $(function() {
 
 	if (document.getElementById('bx_1847241719_199')){
-		let parentCat = document.getElementById('bx_1847241719_199');	
+		let parentCat = document.getElementById('bx_1847241719_199');
 		let chaildCat = parentCat.getElementsByTagName('h3')[0];
 		let sp = document.createElement('span');
 		sp.className = 'oferTxt';
@@ -98,7 +98,7 @@ $(function() {
 			modal.classList.add('modal-open');
 			if(!modalWindow.classList.contains('modalUp')){
 				modalWindow.classList.add('modalUp');
-				}			
+				}
 			}
 
 
@@ -119,14 +119,22 @@ $(function() {
 			}
 			if(!modalWindow.classList.contains('modalUp')){
 					modalWindow.classList.remove('modalUp');
-			}	
+			}
 		}
 
 	}
-
-
-
-
-
-
 });
+
+
+if (document.getElementById('mLink')) {
+	alert('ЕСТЬ!');
+	$('#mLink').hover(
+		function () {
+			$('#mBlock').slideDown('slow');
+		},
+		function () {
+			$('#mBlock').slideUp();
+		});
+}
+
+console.log(document.getElementById('mLink'));

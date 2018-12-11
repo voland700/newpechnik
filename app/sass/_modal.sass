@@ -18,7 +18,7 @@
 		opacity: 1
 	to
 		opacity: 0
-		
+
 .modal-closed
 	animation-duration: 1.5s
 	animation-fill-mode: both
@@ -43,7 +43,7 @@
 	height: auto
 	background-color: $body
 	border: 2px solid rgba($darck, .9)
-	border-radius: 10px	
+	border-radius: 10px
 	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
 .modal__content-header
 	width: 100%
@@ -51,7 +51,7 @@
 	display: flex
 	justify-content: flex-end
 	align-items: center
-	span 
+	span
 		font-size: 2em
 		color: $darck
 		margin-right: 25px
@@ -69,7 +69,7 @@
 	justify-content: space-around
 	flex-wrap: wrap
 .modal__content-p
-	width: 
+	width:
 .modal__content-ul
 	width: 60%
 	ul
@@ -79,7 +79,7 @@
 
 .modal__content-img
 	width: 30%
-	img 
+	img
 		width: 100%
 .modal__content-footer
 	width: 100%
@@ -102,25 +102,25 @@
 		color: $accent
 		box-shadow: 0px -1px 1px 0px rgba(0,0,0,0.2)
 
-@keyframes bounceInDown 
+@keyframes bounceInDown
 	from,
 	60%,
 	75%,
 	90%,
-	to 
+	to
 		animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
-	0%     
+	0%
 		transform: translate3d(0, -3000px, 0)
-	60% 
+	60%
 		transform: translate3d(0, 25px, 0)
-	75% 
+	75%
 		opacity: 1
 		transform: translate3d(0, -10px, 0)
-	90% 
+	90%
 		transform: translate3d(0, 5px, 0)
-	to 
+	to
 		transform: translate3d(0, 0, 0)
-.modalUp 
+.modalUp
 	animation-duration: 1s
 	animation-fill-mode: both
 	animation-name: bounceInDown
