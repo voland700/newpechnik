@@ -1,4 +1,4 @@
-@import "vars"  
+@import "vars"
 @import "fonts"
 @import "libs"
 @import "jquery-fancybox-min"
@@ -38,9 +38,9 @@ body
 
 #exper
 	height: 75px
-	border: 1px solid blue 
+	border: 1px solid blue
 	border-radius: 3px
-	h3 
+	h3
 		text-align: center
 
 
@@ -48,10 +48,10 @@ body
 	background-color: $darck
 .topnav-wrap
 	display: flex
-	flex-direction: row 
+	flex-direction: row
 	justify-content: flex-start
 .topnav-home-wrap
-	padding-top: 1px    
+	padding-top: 1px
 .topnav-home
 	font-size: 24px
 	display: block
@@ -66,7 +66,7 @@ body
 		transition: all .25s
 	&:not([href]):not([tabindex])
 		color: #fff
-	
+
 .topnav-list
 	display: flex
 	flex-direction: row
@@ -78,7 +78,7 @@ body
 		color: #fff
 .topnav-list li
 	list-style: none
-.topnav-item 
+.topnav-item
 	color: #fff
 
 .topnav-item
@@ -107,7 +107,7 @@ body
 	&:focus,
 	&:active
 		border: none
-		outline: none !important		
+		outline: none !important
 .topnav_btn-close
 	background: url(../img/icon/burgers.svg) no-repeat transparent center
 
@@ -120,6 +120,11 @@ body
 	width: 100%
 	padding-top: 15px
 	padding-bottom: 5px
+	.tel
+		color: $darck
+		&:hover
+			color: darken($darck, 3%)
+			text-decoration: none
 
 .head_logo
 	width: 150px
@@ -144,7 +149,7 @@ body
 		background-clip: text
 		color: transparent
 
-	&:hover .head_logo-img #y_logo 
+	&:hover .head_logo-img #y_logo
 		fill: darken($accent, 5%)
 		transition: .3
 
@@ -161,7 +166,7 @@ body
 	color: $darck
 	line-height: 40px
 	margin-bottom: 5px
-	i 
+	i
 		margin-right: 15px
 		font-size: .93em
 
@@ -184,7 +189,7 @@ body
 	background-repeat: no-repeat
 	background-size: 35px 25px
 	background-position: 5px center
-	box-shadow: 0 0 6px rgba(122,122,122,.1)	
+	box-shadow: 0 0 6px rgba(122,122,122,.1)
 	cursor: pointer
 	transition: .3s
 	color: $darck
@@ -244,8 +249,8 @@ body
 	width: 49%
 	font-size: 18px
 	line-height: 20px
-	text-align: right	
-	i 
+	text-align: right
+	i
 		margin-right: 7px
 		color: lighten($darck, 10%)
 
@@ -255,7 +260,7 @@ body
 	font-style: italic
 	line-height: 14px
 	margin-bottom: 4px
-	i 
+	i
 		margin-right: 12px
 		color: lighten($darck, 10%)
 
@@ -286,7 +291,7 @@ body
 	margin: 0 auto 0 auto
 	position: relative
 	transition: .3s
-	a 
+	a
 		display: block
 
 .head_basket-img svg
@@ -296,7 +301,7 @@ body
 	&:hover
 		fill: $accent
 		transition: .3s
-		
+
 .head_basket-col
 	position: absolute
 	top: 0
@@ -353,7 +358,7 @@ body
 @import "_product"
 @import "_pagination"
 @import "_footer"
-@import "_modal"	
+@import "_modal"
 @import "_listarticls"
 @import "_allneed"
 @import "_install"
@@ -363,5 +368,5 @@ body
 @import "_contacts"
 @import "_garbage"
 @import "_schiedel"
-	
+
 @import "media" // Always at the end
