@@ -1,0 +1,68 @@
+@import "vars"
+
+.prof
+.prof-title
+	text-align: center
+	margin-bottom: 25px
+.prof-blocks-wrap
+	width: 100%
+	display: flex
+	flex-direction: row
+	justify-content: space-around
+	align-items: center
+	flex-wrap: wrap
+.prof-block-link
+	width: 40%
+	display: flex
+.prof-btn
+	width: 320px
+	border: 2px solid #fff
+	padding: 5px 10px
+	border-radius: 10px
+	background-color: $accent
+	font-size: 1.3em
+	font-weight: 500
+	color: #222
+	text-align: center
+	display: block
+	margin: auto
+	cursor: pointer
+	box-shadow: 0 0 6px rgba(122,122,122,.2)
+	transition: all .3s
+	&:hover
+		box-shadow: 0 0 6px rgba(122,122,122,.8)
+
+.prof-block-img
+	width: 40%
+	img
+		display: block
+		margin: 0 auto
+
+
+.afbf_feedback_poles h2
+	font-size: 1.8em
+.afbf_required_text
+	color: red
+
+@media only screen and (max-width : 992px)
+	.prof-block-link,
+	.prof-block-img
+		width: 50%
+	.prof-block-img
+		img
+			width: 70%
+@media only screen and (max-width: 768px)
+	.afbf_item_pole
+		margin: 30px 0px 20px
+	.prof-block-link,
+	.prof-block-img
+		width: 90%
+	.prof-btn
+		margin: 30px auto 40px auto
+@media only screen and (max-width: 410px)
+	.prof-block-link,
+	.prof-block-img
+		width: 100%
+	.prof-block-img
+		img
+			width: 100%
