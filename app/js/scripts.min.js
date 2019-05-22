@@ -83,7 +83,7 @@ $(function() {
 		});
 
 
-
+/*
 	let modalShow=document.getElementById('modalShow');
 
 	modalShow.onclick = function() {
@@ -123,11 +123,52 @@ $(function() {
 		}
 
 	}
+	*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 });
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 if (document.getElementById('mLink')) {
-	alert('ЕСТЬ!');
 	$('#mLink').hover(
 		function () {
 			$('#mBlock').slideDown('slow');
@@ -137,4 +178,25 @@ if (document.getElementById('mLink')) {
 		});
 }
 
-console.log(document.getElementById('mLink'));
+	let img;
+	$('.product_photo-prew-link').click(function () {
+
+		img = $(this).attr("href");
+		$("#maimImg").attr("src", img);
+		return false;
+	});
+
+	$('#maimImg').on('click', function (event) {
+		event.preventDefault();
+		$.fancybox.open($('.product_photo-prew-link'), {
+			touch: true,
+			loop: true
+		});
+
+		let instance = $.fancybox.getInstance().group;
+		let namber;
+	  for (let i = 0; i < instance.length; i++){
+	 	  if (instance[i].src==img){ namber=i; }
+		}
+		$.fancybox.getInstance('jumpTo', namber);
+	});

@@ -1,0 +1,38 @@
+@import "vars"
+/*.easter
+	background: url(../img/images/easrer_bg.png)
+	//background-size: 50%
+	background-repeat: no-repeat
+	background-position: bottom right
+	background-color: rgba(79,90,108,.8)*/
+.easter_title
+	text-transform: uppercase
+	font-size: 1.15em
+	padding-right: 7px
+	color: #fff
+	font-weight: 600
+	text-align: center
+
+.easter_info
+	padding-left: 25px
+	font-size: 1.1em
+	text-align: center
+
+.easter_info-big
+	font-size: 1.2em
+	font-weight: 500
+	color: $accent
+	&:after
+		content: ''
+		width: 125px
+		display: block
+		margin: 0 auto
+		border-bottom: 2px solid #fff
+
+@media only screen and (max-width : 767px)
+	.easter_info
+		padding-left: 0
+	.easter_info-big
+		display: block
+		margin-top: 10px
+		margin-bottom: 25px

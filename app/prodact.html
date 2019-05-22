@@ -24,8 +24,10 @@
 	<!-- font-awesome - из CDN - на сайте подключаются из ядра -->
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<!-- font-awesome -END -->
-	<script
-  src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+
+
 	<link rel="stylesheet" href="css/main.min.css">
 
 </head>
@@ -220,211 +222,56 @@
 		 <div class="product_wrap">
 
 			 <!-- Блок с изображениями -->
-			 <div class="product_photo">
-				 <div class="product_photo-img-wrap">
-					 <a href="img/imgdel/tovar/1.jpg" class="product_photo-img-link" id="product_photo-link" onclick="return false">
-						 <img src="/img/imgdel/tovar/1.jpg" id="product_photo" class="fadeIn" alt="Печь камин" title="Печь камин">
-
-						 <span class="product_stick-lebel"><span class="product_stick-lebel-item">Новинка</span>
-							 <!--   <span class="product_stick-lebel-item">Лидер продаж</span>
-                                <span class="product_stick-lebel-item">Спецпредложение</span>   -->
-						</span>
-						 <div class="product_stick-disc">-10%</div>
-					 </a>
-				 </div>
-				 <ul class="product_photo-prew-list">
-					 <a class="product_photo-prew-img" data-img="/img/imgdel/tovar/1.jpg" style="background-image:url('/img/imgdel/tovar/1.jpg')"></a>
-					 <a class="product_photo-prew-img" data-img="/img/imgdel/tovar/3.jpg" style="background-image:url('/img/imgdel/tovar/3.jpg')"></a>
-					 <a class="product_photo-prew-img" data-img="/img/imgdel/tovar/4.jpg" style="background-image:url('/img/imgdel/tovar/4.jpg')"></a>
-					 <a class="product_photo-prew-img" data-img="/img/imgdel/tovar/5.jpg" style="background-image:url('/img/imgdel/tovar/5.jpg')"></a>
-					 <a class="product_photo-prew-img" data-img="/img/imgdel/tovar/6.jpg" style="background-image:url('/img/imgdel/tovar/6.jpg')"></a>
-				 </ul>
-
-				 <div class="product_photo-modal" id="productModal" style="display: none;">
-					 <div class="product_photo-modal-closed"><span class="product_photo-modal-closed-btn" id="btnModalClosed">&times;</span></div>
-					 <div class="product_photo-modal-wrap">
-						 <div class="product_photo-modal-left"><span class="product_photo-modal-left-btn" id="btnModalLeft"></span></div>
-						 <div class="product_photo-modal-wrap-photo">
-							 <img src="img/imgdel/tovar/1.jpg" id="modalImg" class="product_photo-modal-img">
-						 </div>
-						 <div class="product_photo-modal-right"><span class="product_photo-modal-right-btn" id="btnModalRigth"></span></div>
-					 </div>
-				 </div>
-				 <a id="delbtn" style="cursor: pointer">Временная кнопка</a>
-			 </div>
-			<script>
-
-			var mainImgLink = $('#product_photo-link');
-			var mainImg = $("#product_photo");
-			var modal = $('#productModal');
-			var modalImg = $('#modalImg');
-			var prew = $('#btnModalLeft');
-			var next = $('#btnModalRigth');
-			var count;
-			var img;
-			var imgArr = [];
+			<div class="product_photo">
+				<div class="product_photo-img-wrap">
+					<a href="img/imgdel/tovar/1.jpg" class="product_photo-img-link" id="#imgLinck">
+						<img src="/img/imgdel/tovar/1.jpg" id="maimImg" class="fadeIn" alt="Печь камин" title="Печь камин">
+						<span class="product_stick-lebel"><span class="product_stick-lebel-item">Новинка</span>
+					</span>
+						<div class="product_stick-disc">-10%</div>
+					</a>
+				</div>
 
 
-			$('.product_photo-prew-img').click(function(e){
-				img  =  $(this).attr('data-img');
-				mainImg.attr("src", img );
-				e.preventDefault();
-				return false;
-			});
-
-			mainImgLink.click(function(e){
-				modalImg.attr('src', img);
-				var modalImgPath = 	'/'+modalImg.attr('src');
-				modal.attr('style', 'display: block');
-					$('.product_photo-prew-img').each(function(index,value) {
-						imgArr[index] = $(this).attr('data-img');
-					});
-					for(var i=0; i<imgArr.length; i++ ) {
-						if(modalImgPath == imgArr[i]) count = i;
-					}
-				e.preventDefault();
-				return false;
-			});
-
-			$('#btnModalClosed').click(function(e){
-				modal.attr('style', 'display: none');
-				e.preventDefault();
-				return false;
-			});
-
-			next.click(function(e){
-
-				if(count < imgArr.length-1){
-					count++;
-					$('#modalImg').attr('src', imgArr[count]);
-				console.log(imgArr[count]);
-          return false;
-        }
-        if(count >= imgArr.length-1){
-					count=0;
-          $('#modalImg').attr('src', imgArr[count]);
-				}
-				e.preventDefault();
-				return false;
-			});
-
-			prew.click(function(e){
-				if(count <= 0){
-					count= imgArr.length-1;
-					$('#modalImg').attr('src', imgArr[count]);
-          return false;
-        }
-        if(count <= imgArr.length-1){
-          count--;
-          $('#modalImg').attr('src', imgArr[count]);
-        }
-			});
-
-
-
-
-
-/*
-    var imgPrew = document.getElementsByClassName('product_photo-prew-img');
-    var product_photo = document.getElementById('product_photo');
-    var productModal = document.getElementById('productModal');
-    var mainImg;
-    var modalImg;
-    var imgMainPath;
-    var btnModalLeft = document.getElementById('btnModalLeft');
-    var btnModalRigth = document.getElementById('btnModalRigth');
-    var btnModalClosed = document.getElementById('btnModalClosed');
-    var ImgMas = [];
-		var Count;
-
-		var delbtn= document.getElementById('delbtn');
-
-
-    function fileName(fullPath) {
-        return ('' + fullPath).replace(/url\(\"/i, '').replace(/\"\)/i, '');
-		}
-
-
-
-
-
-
-    function fileName(fullPath) {
-        return ('' + fullPath).replace(/url\(\"/i, '').replace(/\"\)/i, '');
-        }
-    for(let i=0; i< imgPrew.length; i++ ) {
-        imgPrew[i].onclick = function(){
-            imgMainPath= fileName(imgPrew[i].style.backgroundImage);
-            product_photo.src= imgMainPath
-        };
-    }
-    product_photo.onclick = function(){
-        productModal.style.display = "block";
-        mainImg = product_photo.getAttribute('src');
-        modalImg = document.getElementById('modalImg');
-        modalImg.setAttribute('src', mainImg);
-
-        for(var i=0; i< imgPrew.length; i++ ) {
-            ImgMas[i]= fileName(imgPrew[i].style.backgroundImage);
-        }
-
-        for(var i=0; i<ImgMas.length; i++ ) {
-            if(mainImg==ImgMas[i]){
-                Count = i;
-                return false;
-            }
-        }
-    }
-
-    window.addEventListener("keydown", function (e) {
-        if (e.keyCode == 27) {
-            productModal.style.display = 'none';
-        }
-    }, true);
-
-    btnModalClosed.onclick = function(){
-        productModal.style.display = "none";
-    }
-
-    btnModalRigth.onclick = function () {
-        if(Count < ImgMas.length-1){
-            Count++;
-            modalImg.setAttribute('src', ImgMas[Count]);
-            return false;
-        }
-        if(Count >= ImgMas.length-1){
-            Count=0;
-            modalImg.setAttribute('src', ImgMas[Count]);
-        }
-    }
-    btnModalLeft.onclick = function () {
-        if(Count <= 0){
-            Count= ImgMas.length-1;
-            modalImg.setAttribute('src', ImgMas[Count]);
-            return false;
-        }
-        if(Count <= ImgMas.length-1){
-            Count--;
-            modalImg.setAttribute('src', ImgMas[Count]);
-        }
-    }
-
-
-*/
-
-
-
-			</script>
-
-
+				<div class="product_photo-prew-list">
+					<a href="/img/imgdel/tovar/1.jpg"  class="product_photo-prew-link"  data-fancybox="product">
+						<div class="product_photo-item-block"><span class="product_photo-prew-img" style="background-image: url('/img/imgdel/tovar/1.jpg')"></span></div>
+					</a>
+					<a href="/img/imgdel/tovar/3.jpg"  class="product_photo-prew-link"  data-fancybox="product">
+						<div class="product_photo-item-block"><span class="product_photo-prew-img" style="background-image: url('/img/imgdel/tovar/3.jpg')"></span></div>
+					</a>
+					<a href="/img/imgdel/tovar/10.jpg"  class="product_photo-prew-link"  data-fancybox="product">
+						<div class="product_photo-item-block"><span class="product_photo-prew-img" style="background-image: url('/img/imgdel/tovar/10.jpg')"></span></div>
+					</a>
+					<a href="/img/imgdel/tovar/4.jpg"  class="product_photo-prew-link"  data-fancybox="product">
+						<div class="product_photo-item-block"><span class="product_photo-prew-img" style="background-image: url('/img/imgdel/tovar/4.jpg')"></span></div>
+					</a>
+					<a href="/img/imgdel/tovar/5.jpg"  class="product_photo-prew-link"  data-fancybox="product">
+						<div class="product_photo-item-block"><span class="product_photo-prew-img" style="background-image: url('/img/imgdel/tovar/5.jpg')"></span></div>
+					</a>
+					<a href="/img/imgdel/tovar/6.jpg"  class="product_photo-prew-link"  data-fancybox="product">
+						<div class="product_photo-item-block"><span class="product_photo-prew-img" style="background-image: url('/img/imgdel/tovar/6.jpg')"></span></div>
+					</a>
+					<a href="/img/imgdel/tovar/2.jpg"  class="product_photo-prew-link"  data-fancybox="product">
+						<div class="product_photo-item-block"><span class="product_photo-prew-img" style="background-image: url('/img/imgdel/tovar/2.jpg')"></span></div>
+					</a>
+					<a href="/img/imgdel/tovar/3.jpg"  class="product_photo-prew-link"  data-fancybox="product">
+						<div class="product_photo-item-block"><span class="product_photo-prew-img" style="background-image: url('/img/imgdel/tovar/3.jpg')"></span></div>
+					</a>
+					<a href="/img/imgdel/tovar/11.jpg"  class="product_photo-prew-link"  data-fancybox="product">
+						<div class="product_photo-item-block"><span class="product_photo-prew-img" style="background-image: url('/img/imgdel/tovar/11.jpg')"></span></div>
+					</a>
+					<a href="/img/imgdel/tovar/12.jpg"  class="product_photo-prew-link"  data-fancybox="product">
+						<div class="product_photo-item-block"><span class="product_photo-prew-img" style="background-image: url('/img/imgdel/tovar/12.jpg')"></span></div>
+					</a>
+					<a href="/img/imgdel/tovar/13.jpg"  class="product_photo-prew-link"  data-fancybox="product">
+						<div class="product_photo-item-block"><span class="product_photo-prew-img" style="background-image: url('/img/imgdel/tovar/13.jpg')"></span></div>
+					</a>
+				</div>
+			</div>
 
 
 			 <!-- END Блок с изображениями -->
-
-
-
-
-
 			 <div class="product_info-wrap">
 				 <div class="product_info-preview">
 					 <p>Чугунная печь для бани Везувий Легенда Ковка 16 (205), с дверцей с жаропрочным стеклом Везувий 205, отапливает парную объемом  8 - 18 м<sup>3</sup>.</p>
@@ -1847,5 +1694,6 @@
 	</style>
 
 <script src="js/scripts.min.js"></script>
+
 </body>
 </html>

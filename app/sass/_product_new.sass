@@ -1,0 +1,629 @@
+@import "_vars"
+
+.product
+.product_wrap
+	width: 100%
+	display: flex
+	flex-direction: row
+	justify-content: flex-start
+	margin-bottom: 30px
+.product_photo
+	flex: 0 0 430px
+	margin-right: 55px
+
+.product_photo-img-wrap
+	width: 430px
+	height: 500px
+	display: table
+	margin:  0
+	padding: 0px
+	border-collapse: collapse
+	position: relative
+	overflow: hidden
+	background-color: #fff
+	border: 1px solid #eee
+
+.product_photo-img-link
+	position: relative
+	display: table-cell
+	vertical-align: middle
+	text-align: center
+	text-decoration: none
+	width: 100%
+	margin: 0px
+	padding: 0px
+	img
+		width: auto
+		max-width: 430px
+		height: auto
+		max-height: 480px
+
+
+.product_stick-disc
+	position: absolute
+	bottom: 10px
+	right: 10px
+	width: 72px
+	height: 74px
+	background: url(../img/stick_disc.png) no-repeat center
+	color: #fff
+	text-align: center
+	text-shadow: 0 1px 0 #ba3434
+	font-weight: bold
+	font-size: 1.6em
+	line-height: 74px
+	line-height: 74px
+
+.product_stick-lebel
+	display: flex
+	flex-direction: column
+	flex-wrap: wrap
+	justify-content: flex-end
+	position: absolute
+	top: 15px
+	right: -0
+
+.product_stick-lebel-item
+	background: linear-gradient(to right, #c8c8ce 1%, #a7a7aa 94%,#7c7d7f 100%)
+	background-color: $gray
+	font-size: .95em
+	text-transform: uppercase
+	color: #fff
+	text-shadow: 0px 1px 0 $darck
+	padding: 3px 15px
+	margin-bottom: 2px
+
+.product_photo-prew-list
+	width: 100%
+	overflow: hidden
+	display: flex
+	flex-direction: row
+	justify-content: flex-start
+	flex-wrap: wrap
+	margin: 15px 0
+
+.product_photo-prew-link
+	display: block
+	width: 20%
+	position: relative
+	overflow: hidden
+	transition: all .7s cubic-bezier(.3,.1,.58,1)
+	&:before
+		content: ''
+		display: block
+		padding-top: 100%
+	&:hover
+		.product_photo-prew-img
+			transition: all .3s cubic-bezier(.3,.1,.58,1)
+			border: 2px solid #c8c8ce
+			opacity: .9
+
+.product_photo-item-block
+	display: block
+	width: 100%
+	height: 100%
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	padding: 3px
+
+.product_photo-prew-img
+	display: block
+	width: 100%
+	height: 100%
+	overflow: hidden
+	background-color: #fff
+	background-position: center
+	background-repeat: no-repeat
+	background-size: contain
+	border: 2px solid #eeeeee
+	border-radius: 3px
+
+.product_info-wrap
+	width: 100%
+
+.product_info-preview
+	width: 100%
+	font-size: .95em
+	line-height: 1.2
+	margin-bottom: 15px
+	p
+		margin-bottom: 0
+
+.product_info-price-wrap
+	width: 100%
+	display: flex
+	justify-content: flex-start
+
+.product_info-price-block
+	display: inline-block
+	padding: 12px 15px
+	background-color: $darck
+	border-radius: 3px
+	color: #fff
+
+.product_info-price-old
+	display: block
+	font-size: .95em
+	line-height: 1
+	text-decoration: line-through
+	color: #b8b8b8
+
+.product_info-price-new
+	display: block
+	font-size: 1.3em
+	text-transform: uppercase
+	text-shadow: 0 1px 0 $darck
+
+.product_info-price-profit
+	font-size: .9em
+	line-height: 1
+	color: $gray
+
+.product_info-motivation-wrap
+	display: flex
+	flex-basis: 50%
+	flex-grow: 2
+	justify-content: center
+	align-items: center
+	padding-left: 15px
+	padding-right: 15px
+
+
+
+.motivation-wrap
+	position: relative
+	width: 100%
+	cursor: pointer
+
+
+.motivation-link
+
+	color: $link
+	font-size: .95em
+	font-style: italic
+	line-height: 1.2
+	padding: 0 0 5px 15px
+.motivation-block
+	display: block
+	position: absolute
+	overflow-y: hidden
+	height: auto
+	right: 0
+	background-color: #fff
+	border: 1px solid $accent
+	border-radius: 5px
+	padding: 15px
+	z-index: 10
+	box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.4)
+	&:hover
+		display: block
+	h3
+		font-size: .965em
+		margin-top: 0
+		margin-bottom: 1rem
+	p
+		font-style: italic
+		font-size: .9em
+		line-height: 1.35
+		margin-top: 0
+    margin-bottom: 1rem
+.motivation-price
+	font-weight: 500
+	color: darken($darck, 3%)
+.motivation-p
+	margin-bottom: .1rem
+.motivation-phone
+	display: block
+	white-space: nowrap
+	font-size: .93em
+	line-height: 1.2
+	color: $darck
+	font-weight: 500
+	transition: color .3s ease
+	&:hover
+		color: $link
+		text-decoration: none
+.motivation-btn
+	display: block
+	width: 150px
+	margin: 15px auto 5px auto
+	padding-top: 8px
+	padding-bottom: 8px
+	border: 2px solid $gray
+	background-color: $body
+	color: $darck
+	border-radius: 7px
+	text-align: center
+	font-size: .75em
+	text-transform: uppercase
+	line-height: 1em
+	font-weight: 600
+	transition: .3s ease
+	&:hover
+		text-decoration: none
+		color: $darck
+		border-color: $accent
+		box-shadow: 0 0 6px rgba(122,122,122,.1)
+		color: darken($darck, 3%)
+
+
+.product_info-buy-wrap
+	width: 100%
+	display: flex
+	flex-direction: row
+	justify-content: flex-start
+	align-items: center
+	margin-top: 20px
+	font-size: 1em
+
+.product_info-buy-order
+	width: 100%
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	align-items: center
+
+.product_info-buy-form
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	align-items: center
+	background-color: $gray
+	border-radius: 3px
+	width: 80px
+	height: 30px
+	margin-right: 10px
+	input
+		width: 40px
+		height: 24px
+		text-align: center
+		border: 1px solid $gray
+		border-radius: 2px
+	a
+		display: block
+		width: 20px
+		height: 24px
+		text-align: center
+		font-size: 1.3em
+		line-height: 1.1
+		color: #fff
+		transition: 0.25s all
+		&:hover
+			text-decoration: none
+			color: $darck
+
+
+.product-buy-btn
+	width: 155px
+	height: 40px
+	background-color: $darck
+	border: 2px solid $gray
+	border-radius: 10px
+	color: $accent
+	text-shadow: 1px 1px 1px rgba(43, 53, 69, .2)
+	font-size: 0.85em
+	font-weight: 600
+	text-transform: uppercase
+	margin-right: 10px
+	cursor: pointer
+	transition: 0.25s all
+	&:hover
+		text-shadow: 1px 1px 1px rgba(43, 53, 69, 1)
+		border: 2px solid $accent
+
+
+.product-buy-btn-fast
+	display: block
+	width: 155px
+	height: 40px
+	background-color: $darck
+	border: 2px solid $gray
+	border-radius: 10px
+	color: $accent
+	text-shadow: 1px 1px 1px rgba(43, 53, 69, .2)
+	font-size: 0.85em
+	font-weight: 600
+	text-transform: uppercase
+	cursor: pointer
+	text-decoration: none
+	//transition: 0.25s all
+	span
+		margin: auto
+	&:hover
+		//text-shadow: 1px 1px 1px rgba(43, 53, 69, 1)
+		border: 2px solid $accent
+		text-decoration: none
+		transition: 0.25s all
+
+		span
+			color: $accent
+			text-decoration: none
+
+
+.product_gift
+	width: 100%
+	padding: 10px 15px 15px 15px
+	margin-top: 30px
+	background-color: lighten($body, 2%)
+	border: 2px solid $gray
+	//border: 1px solid #ddd
+	border-radius: 5px
+
+	h3
+		line-height: 1
+		font-size: 1.1em
+		margin-bottom: 12px
+
+.product_gift-wrap
+	display: flex
+	flex-direction: row
+	justify-content: flex-start
+	align-items: flex-start
+
+.product_gift-img
+	width: 70px
+	padding: 2px
+	background-color: #fff
+	border: 1px solid $gray
+	border-radius: 2px
+	margin-right: 15px
+	img
+		width: 100%
+
+
+.product_gift-txt
+	font-size: .95em
+	line-height: 1.25
+	ul
+		padding-left: 0
+		margin-bottom: 5px
+		li
+			list-style: none
+	p
+		margin-bottom: 5px
+	i
+		font-size: .86em
+		margin-right: 5px
+		opacity: .7
+
+
+.product_property
+	width: 100%
+	font-size: .95em
+	line-height: 1.3
+	margin-top: 30px
+.product_property-item
+	display: flex
+	flex-direction: row
+	justify-content: space-between
+	align-items: flex-end
+	width: 100%
+	margin-bottom: 0
+	margin-top: 3px
+	padding-right: 5px
+	.definition
+		text-align: left
+		font-weight: 500
+	.value
+		text-align: right
+		font-style: italic
+		margin-bottom: 0
+.dots
+	flex-grow: 1
+	flex-shrink: 2
+	border-bottom: 1px dotted #dee0ee
+
+.product_detail-txt
+	width: 100%
+	line-height: 1.5
+	font-size: 1em
+	padding: 15px 0
+	p
+		margin-bottom: .8rem
+	td a
+		display: block
+		color: $link
+	table
+		overflow-x: hidden
+
+.table_wrap
+	display: inline-block
+	width: 100%
+
+
+.table-w70
+	border-collapse: collapse
+	width: 70%
+	font-size: .95em
+	margin-top: 20px
+	margin-bottom: 20px
+	tr
+		background-color: lighten($gray, 17%)
+	th
+		background-color: #e0e0e1
+		border: 1px solid #ddd
+		padding: 3px 10px
+	td
+		border: 1px solid #ddd
+		padding: 3px 10px
+
+
+
+
+
+.vulkan_s
+	border-collapse: collapse
+	width: 100%
+	font-size: .95em
+	margin-top: 20px
+	margin-bottom: 20px
+	th
+		background-color: #e0e0e1
+		border: 1px solid #ddd
+		padding: 3px 10px
+	td
+		border: 1px solid #ddd
+		padding: 3px 10px
+.vezuviy_tabl
+	border-collapse: collapse
+	border: 1px solid #ddd
+	width: 100%
+	margin-top: 30px
+
+	tr:first-child
+		background-color: #e0e0e1
+		text-align: center
+		font-size: .95em
+		font-weight: bold
+	td
+		border: 1px solid #ddd
+		padding: 5px
+		font-size: .95em
+
+
++media-breakpoint-down(xl)
++media-breakpoint-down(lg)
+	.product_photo
+		flex: 0 0 auto
+		margin-right: 45px
+	.product_photo-img-wrap
+		width: 375px
+		height: 410px
+	.product_photo-img-link img
+		max-width: 370px
+		max-height: 370px
+	.product_photo-prew-img
+		width: 71px
+		height: 71px
+	.product-buy-btn
+		width: 100px
+		font-size: .8em
+		line-height: 1
+	.product-buy-btn-fast
+		width: 145px
+		font-size: .8em
+		line-height: 1
+	.table-w70
+		width: 85%
++media-breakpoint-down(md)
+	.product_photo
+		width: 285px
+		flex: 0 0 auto
+		margin-right: 30px
+	.product_photo-img-wrap
+		width: 100%
+		height: 320px
+	.product_photo-img-link img
+			max-width: 280px
+			max-height: 310px
+	.product_photo-prew-img
+		width: 71px
+		height: 71px
+
+
+
+	.product_info-price-block
+		display: block
+	.product_info-price-wrap
+		flex-wrap: wrap
+	.product_info-motivation-wrap
+		padding: 0
+		margin: 15px 0 10px 0
+	.motivation-link
+		padding-left: 0
+
+
+
+	.product_description-tab-video
+		width: 90%
+	.table_wrap
+		overflow-y: scroll
+	.table-w70
+		width: 100%
++media-breakpoint-down(sm)
+	.product_wrap
+		flex-wrap: wrap
+	.product_photo
+		flex: 0 0 400px
+		margin-left: auto
+		margin-right: auto
+	.product_photo-img-wrap
+		height: 465px
+	.product_photo-img-link img
+		max-width: 400px
+		max-height: 400px
+	.product_photo-prew-img
+		width: 76px
+		height: 76px
+	.motivation-link
+		padding-left: 10px
+	.motivation-block
+		width: 350px
+	table
+		line-height: 1.35
+	.product_photo-modal-left
+		width: 14%
+	.product_photo-modal-right
+		width: 14%
+	.product_photo-modal-wrap-photo
+		width: 70%
+	.product-buy-btn,
+	.product-buy-btn-fast
+		width: 150px
+		font-size: .87em
+		margin-right: 10px
+	.product_info-buy-form
+		margin-right: 10px
+	.product_info-buy-wrap
+		justify-content: flex-start
++media-breakpoint-down(xs)
+	.product_photo-img-link img
+		width: 100%
+@media only screen and (max-width : 500px)
+	.product_info-price-wrap
+		flex-direction: column
+	.product_info-motivation-wrap
+
+		width: 100%
+	.motivation-link
+		padding-left: 0
+	.motivation-block
+		width: 100%
+
+
+@media only screen and (max-width : 420px)
+	.product_photo
+		flex: 0 1 400px
+	.product_photo-img-wrap
+		height: 465px
+	.product_photo-img-link img
+		max-width: 95%
+		max-height: 95%
+	.product_photo-prew-img
+		width: 72.5px
+		height: 72.5px
+
+	.product-buy-btn,
+	.product-buy-btn-fast
+		width: auto
+		padding: 1px 15px
+		font-size: .7em
+		margin-right: 10px
+@media only screen and (max-width : 370px)
+	.product_photo-img-wrap
+		height: 420px
+	.product_info-price-block
+		width: 100%
+	.product_info-buy-wrap
+		form
+			width: 100%
+	.product_info-buy-wrap
+		flex-direction: column
+	.product-buy-btn
+		flex-basis: 100%
+	.product-buy-btn-fast
+		width: 100%
+		margin: 5px 0 0 0
