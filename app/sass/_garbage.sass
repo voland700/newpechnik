@@ -233,6 +233,46 @@
 .morsosee-name
 	font-weight: 600
 
+
+.uf_info-wrap
+	padding: 5px 5px 5px 5px
+	background-color: $darkBody
+	border-radius: 3px
+	margin: 15px 0 35px 0
+	border-bottom: 1px solid darken($darkBody, 5%)
+
+.uf_info
+	display: flex
+	justify-content: space-between
+	align-items: center
+	width: 100%
+	height: auto
+	padding: 15px
+	background-color: lighten($body, 0.8%)
+	box-shadow: 0 0 3px rgba(122, 122, 122, .2)
+	border-radius: 3px
+
+.uf_info-txt-r
+	margin: 0
+.uf_info-btn-r
+	display: block
+	box-sizing: border-box
+	padding: 5px 15px
+	border: 1px solid $accent
+	border-radius: 5px
+	background-color: $accent
+	font-style: italic
+	color: #333333
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2)
+	transition: .3s ease-out
+.uf_info-btn-r:hover
+	box-shadow:	0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2)
+	text-decoration: none
+	background-color: darken($accent, 3%)
+	//color: lighten($darkBody, 10%)
+	color: #555555
+
+
 @media only screen and (max-width : 1140px)
 	.oferTxt
 		right: 15px
@@ -254,6 +294,10 @@
 		display: none
 	.video_block-item
 		width: 100%
+
+	.uf_info-btn-r
+		margin-left: 15px
+
 @media only screen and (max-width : 500px)
 	.morsoinfo_wrap
 		display: none
@@ -261,3 +305,17 @@
 @media only screen and (max-width : 480px)
 	.stock_a
 		margin: 0
+
+@media only screen and (max-width : 450px)
+	.uf_info
+		flex-direction: column
+
+
+
+
+	.uf_info-txt-r
+		width: 100%
+		text-align: justify
+
+	.uf_info-btn-r
+		margin: 20px auto

@@ -1,0 +1,151 @@
+@import "vars"
+
+
+.chimney_wrap
+	width: 100%
+	margin-bottom: 50px
+.chimney_way-wrap
+	max-width: 325px
+	margin-bottom: 25px
+.chimney_way_img-wrap
+	width: 100%
+	display: flex
+	justify-content: space-between
+	.chimney_way-active
+		border: 1px solid lighten($accent, 25%)
+
+
+
+.chimney_way_img-block
+	display: block
+	max-width: 150px
+	background-color: #fff
+	padding: 10px
+	box-shadow: 0 0 3px rgba(122,122,122,.5)
+	border-radius: 3px
+	box-sizing: border-box
+	transition: all .2s ease-in-out
+	cursor: pointer
+	&:hover
+		box-shadow: 0 0 6px rgba(122,122,122,.8)
+
+.chimney_way_img
+	width: 100%
+
+.chimney_way_img-title
+	margin: 0
+	font-weight: 500
+	text-align: center
+
+.chimney_diam-wrap
+	max-width: 325px
+	margin-bottom: 25px
+.chimney_diam-list
+	margin: 0
+	padding: 0
+	width: 100%
+	display: flex
+	justify-content: space-between
+	.chimney_diam-active
+		border: 1px solid lighten($accent, 25%)
+.chimney_diam-item
+	list-style-type: none
+	display: inline-block
+	background-color: #fff
+	padding: 5px 15px
+	font-weight: 500
+	box-shadow: 0 0 3px rgba(122,122,122,.5)
+	border-radius: 3px
+	transition: all .2s ease-in-out
+	cursor: pointer
+	&:hover
+		box-shadow: 0 0 6px rgba(122,122,122,.8)
+
+.chimney_hight-wrap
+	margin-bottom: 25px
+.chimney_hight-list
+	width: 80px
+	padding: 3px 10px
+	border: 1px solid rgba(122,122,122,.5)
+
+
+.chimney_list-wrap
+	width: 100%
+	min-height: .01%
+	overflow-x: auto
+.chimney_list
+	width: 70%
+	border-collapse: collapse
+	border-spacing: 0
+	background-color: #fff
+	border: 1px solid $gray
+	thead
+		display: table-header-group
+		vertical-align: middle
+		border-color: inherit
+	th
+		text-align: center
+		border: 1px solid $gray
+		padding: 5px 2px
+	tbody
+		display: table-row-group
+		vertical-align: middle
+		border-color: inherit
+	tr
+		display: table-row
+		vertical-align: inherit
+		border-color: inherit
+	td
+		border: 1px solid $gray
+		text-align: center
+	img
+		max-width: 75px
+		max-height: 75px
+	a
+		display: block
+
+	th:nth-child(1)
+		width: 50px
+	th:nth-child(2)
+		width: 90px
+		font-weight: 600
+	td:nth-child(2)
+		width: 90px
+	td:nth-child(3)
+		a
+			padding-left: 10px
+			text-align-last: left
+			color: $link
+	td:nth-child(4)
+		width: 90px
+	td:nth-child(5)
+		width: 90px
+.chimney_list-result
+	font-style: italic
+	td
+		color: #377020
+	td:nth-child(1)
+		text-align: left
+		padding: 7px 25px
+
+.fade-enter-active, .fade-leave-active
+	transition: opacity .5s
+
+.fade-enter, .fade-leave-to
+	opacity: 0
+
+@media only screen and (max-width : 1200px)
+	.chimney_list
+		width: 80%
+@media only screen and (max-width : 992px)
+	.chimney_list
+		width: 90%
+@media only screen and (max-width : 768px)
+	.chimney_list
+		width: 100%
+@media only screen and (max-width : 420px)
+	.chimney_way-wrap
+		width: 100%
+
+	.chimney_diam-wrap
+		width: 100%
