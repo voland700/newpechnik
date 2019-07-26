@@ -1,0 +1,155 @@
+$bg: #999fb0
+$bgl: #edeef8
+$bgDarck: #575b71
+$bord: #dee0ee
+$accent: #8b92a5
+
+$accent: #FC0
+$darck: #4f5a6c
+$gray: #c8c8ce
+$body: #fbfaf8
+$darkBody: lighten(#e8e3d7, 1%)
+$link: #0051A6
+$morso: #ae9357
+@import "vars"
+
+.uni
+	min-height: 700px
+.uni-way-wrap
+	width: 100%
+	display: flex
+	justify-content: flex-start
+	margin-bottom: 35px
+.uni-way-wrap .active
+	border-color: lighten($darck, 30%)
+	.uni-way-title
+		background-color: lighten($darck, 30%)
+		color: #fff
+.uni-way-item
+	width: 18%
+	background-color: #fff
+	border: 1px solid $bord
+	border-radius: 4px
+	transition: color 0.15s ease 0s, border-color 0.15s ease 0s, background-color 0.15s ease 0s
+	cursor: pointer
+	padding: 2px
+	margin-right: 20px
+	margin-bottom: 20px
+	&:hover
+		border-color: lighten($darck, 30%)
+.uni-way-photowrap
+	width: 100%
+.uni-way-img
+	width: 100%
+.uni-way-title
+	color: $bgDarck
+	font-weight: 600
+	line-height: 1.1
+	text-align: center
+	margin: 0
+	padding: 7px 0 10px 0
+	background-color: $bgl
+.uni-diam
+	margin-bottom: 35px
+.uni-diam-list
+	width: 100%
+	display: flex
+	flex-wrap: wrap
+	justify-content: flex-start
+	margin-bottom: 25px
+	padding-left: 0
+.uni-diam-item
+	display: block
+	border: 1px solid $bord
+	border-radius: 4px
+	padding: 2px
+	margin: 0 20px 20px 0
+	cursor: pointer
+	transition: color 0.15s ease 0s, border-color 0.15s ease 0s, background-color 0.15s ease 0s
+	span
+		display: block
+		padding: 5px 15px
+		background-color: $bgl
+	&:hover
+		border-color: lighten($darck, 30%)
+		color: #ffffff
+		span
+			background-color: lighten($darck, 30%)
+.uni-diam-list .active
+	border-color: lighten($darck, 30%)
+.uni-diam-list .active span
+	background-color: lighten($darck, 30%)
+	color: #ffffff
+.uni_hight-wrap
+	margin-bottom: 50px
+.uni_hight-list
+	width: 100px
+	padding: 3px 10px
+	border-radius: 4px
+	padding: 5px 15px
+	background-color: $bgl
+	option
+		padding: 5px 10px
+.uni_hight-list:focus
+	border-color: lighten($darck, 30%)
+	outline-color: lighten($darck, 30%)
+.uni_result
+	margin-bottom: 50px
+.uni_result-wrap
+	width: 100%
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	align-items: flex-start
+.uni_result-wrap-img
+	width: 15%
+.uni_result-img
+	width: 100%
+.uni_result-txt
+	width: 83%
+.uni_result-attention
+	font-weight: 600
+.uni_result-total
+	margin: 16px 0 20px 0
+	span
+		font-weight: 1.1em
+		font-style: italic
+.uni_result-price
+	font-weight: 1.1em
+	font-style: italic
+	font-weight: 600
+	color: green
+	white-space: nowrap
+.uni_result-img-pallet
+	display: block
+	width: 60%
+	margin: 5px auto
+@media only screen and (max-width : 1253px)
+	.uni-way-wrap
+		justify-content: space-between
+	.uni-way-item
+		width: 22%
+		margin: 0
+	.uni_result-img-pallet
+		width: 80%
+@media only screen and (max-width : 580px)
+	.uni-way-wrap
+		justify-content: space-around
+		flex-wrap: wrap
+	.uni-way-item
+		width: 40%
+		margin-bottom: 20px
+	.uni_result-img-pallet
+		width: 100%
+	.uni-diam-list
+		justify-content: center
+	.uni_hight-list
+		width: 100px
+		display: block
+		margin: 10px auto
+	.uni_result-wrap-img
+		width: 0%
+	.uni_result-img
+		display: none
+	.uni_result-txt
+		width: 100%

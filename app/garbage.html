@@ -23,9 +23,6 @@
 	<!-- Custom Browsers Color End -->
 	<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 	  crossorigin="anonymous"></script>
-	<!-- Vue.js - link sdn-->
-	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
-
 	<link rel="stylesheet" href="css/main.min.css">
 </head>
 
@@ -228,233 +225,51 @@
 	</div>
 
 	<div class="container">
-		<h1 class="main_title">Чугунная печь-камин Jotul F 3 TD BP</h1>
-		<div class="breadcrumbs">
-			<ul class="breadcrumb-list">
-				<li class="breadcrumb-item" id="bx_breadcrumb_0" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" itemref="bx_breadcrumb_1">
-					<a href="/catalog/" title="Каталог" itemprop="url">
-						<span itemprop="title">Каталог</span>
-					</a>
-				</li>
-				<li class="breadcrumb-item" id="bx_breadcrumb_1" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" itemprop="child"
-				  itemref="bx_breadcrumb_2">
-					<a href="/catalog/pechi-kaminy/" title="Печи-камины" itemprop="url">
-						<span itemprop="title">Печи-камины</span>
-						<i class="fa fa-caret-right"></i>
-					</a>
-				</li>
-				<li class="breadcrumb-item" id="bx_breadcrumb_2" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" itemprop="child">
-					<a href="/catalog/pechi-jotul/" title="Чугунные печи-камины Jotul" itemprop="url">
-						<span itemprop="title">Чугунные печи-камины Jotul</span>
-						<i class="fa fa-caret-right"></i>
-					</a>
-				</li>
-				<li class="breadcrumb-item">
-					<span>Чугунная печь-камин Jotul F 3 TD BP</span>
-				</li>
-			</ul>
-		</div>
+		<h1 class="main_title">Информация о сотрудничестве</h1>
+		<div class="breadcrumbs"><ul class="breadcrumb-list">
+			<li class="breadcrumb-item" id="bx_breadcrumb_0" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" itemref="bx_breadcrumb_1">
+				<a href="/" title="Главная" itemprop="url">
+					<span itemprop="title">Главная</span><i class="fa fa-caret-right"></i>
+				</a>
+			</li>
+			<li class="breadcrumb-item" id="bx_breadcrumb_1" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" itemprop="child">
+				<a href="/about/" title="О печном центре" itemprop="url">
+					<span itemprop="title">О печном центре</span><i class="fa fa-caret-right"></i>
+				</a>
+			</li>
+			<li class="breadcrumb-item">
+				<span>Печникам</span>
+			</li></ul></div>
 	</div>
 
-	<div class="container"> <!--Begining content-->
-<br>
+	<div class="container">
 
 
-	<div class="uf_info-wrap">
-		<div class="uf_info">
-				<p class="uf_info-txt-r">Вы можете расчитать примерную стоимость комплекта дымохода Schiedel Permeter он-лайн</p>
-				<a href="https://www.pechnik.su/catalog/chimneys/calculation-chimneys/" class="uf_info-btn-r">Посчитать</a>
-		</div>
+<img src="/img/schiedel-uni-Ihight.jpg" alt="Jпределить высоту дымохода Schiedel UNI" class="garbage_right_350">
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime modi nobis recusandae magni porro illum mollitia ea, consequuntur doloribus itaque unde aut reiciendis sit quidem, natus, qui impedit incidunt exercitationem!</p>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit, iure voluptatum quibusdam dolor quos ea voluptates doloribus magnam cumque culpa debitis excepturi reiciendis at quasi totam, aliquid asperiores sit veniam? Deleniti quae ipsam hic at nostrum adipisci ducimus voluptatem non nemo, sit minus accusamus consequuntur consequatur error, quaerat ad quia?</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	</div>
-
-<br><br><br>
-
-
-	<div id="add">
-
-		<div class="chimney_wrap">
-			<p>Вы можете самостоятельно расcчитать примерную стоимость, необходимые элементы стального сэндвич дымохода Schiedel Permeter.<br>
-			Укажите способ подключения дымохода: насадной или настенный, диаметр дымохода и его высоту.</br>
-			<h3>Укажите способ подключения дымохода</h3>
-
-			<section class="chimney_way-wrap">
-				<div class="chimney_way_img-wrap">
-					<div v-on:click.prevent="chooseWay" data-typeinstal="nasad" class="chimney_way_img-block">
-						<img src="/img/imgdel/chimney/nasad.jpg" alt="Насадной" class="chimney_way_img">
-						<p class="chimney_way_img-title">Насадной</p>
-					</div>
-					<div v-on:click="chooseWay" data-typeinstal="nasten" class="chimney_way_img-block">
-						<img src="/img/imgdel/chimney/nasten.jpg" alt="Настенный" class="chimney_way_img">
-						<p class="chimney_way_img-title">Настенный</p>
-					</div>
-				</div>
-			</section>
-<transition name="fade">
-			<section v-show="diam.show" class="chimney_diam-wrap">
-				<h3>Выбирите диаметр дымохода</h3>
-				<ul class="chimney_diam-list">
-					<li v-on:click="chooseDiam" data-diam="130" class="chimney_diam-item">&empty; 130</li>
-					<li v-on:click="chooseDiam" data-diam="150" class="chimney_diam-item">&empty; 150</li>
-					<li v-on:click="chooseDiam" data-diam="200" class="chimney_diam-item">&empty; 200</li>
-				</ul>
-			</section>
-</transition>
-<transition name="fade">
-			<section v-show="hight.show" class="chimney_hight-wrap">
-				<h3>Укажите высоту дымохода</h3>
-
-				<select v-model="hight.type" @change="chooseHight" class="chimney_hight-list">
-					<option value="4">4 м</option>
-					<option value="5">5 м</option>
-					<option value="6">6 м</option>
-					<option value="7">7 м</option>
-					<option value="8">8 м</option>
-					<option value="9">9 м</option>
-					<option value="10">10 м</option>
-				</select>
-			</section>
-		</div>
-</transition>
-<transition name="fade">
-	<div v-show="items.show" class="chimney_list-wrap">
-		<table class="chimney_list">
-			<thead>
-				<tr>
-					<th>№</th>
-					<th>Photo</th>
-					<th>Наименование</th>
-					<th>Кол-во</th>
-					<th>Цена</th>
-				</tr>
-			</thead>
-			<tbody>
-
-				<tr>
-					<td>2</td>
-					<td><a href="#"><img src="/img/imgdel/chimney/pipe_1m.jpg" alt="#"></a></td>
-					<td><a href="#">Труба дымохода - 1000 мм d - Ø 130 мм</a></td>
-					<td>4</td>
-					<td>4069</td>
-				</tr>
-
-
-				<tr v-for="(value, name, index) in demand">
-					<td>{{ index + 1}}</td>
-					<td><a href=""><img src="/" alt="#"></a></td>
-					<td><a href="#">Опорная консоль дымохода - 570 мм</a></td>
-					<td>1</td>
-					<td>7839</td>
-				</tr>
-
-
-
-				<tr class="chimney_list-result">
-					<td colspan="3">Итого:</td>
-					<td>9</td>
-					<td>12019</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-</transition>
-
-<transition name="atten">
-		<div v-show="attention" class="chimney_attention">
-			<p><strong>Внимание!</strong> Состав и стоимость комплекта дымохода рассчитываются исход из требований к наличию элементов базового комплекта и рекомендованных цен производителя Schiedel, в цену не включаются транспортные расходы и стоимость монтажа.</p>
-			<p>Состав комплекта и его стоимость – не являются публичной офертой, носят рекомендательный характер и могут быть изменены в связи с конструктивными особенностями здания (количества межэтажных перекрытий, угла наклона кровли и т.д.).</p>
-			<p>Для правильного расчета комплекта дымохода с учетом конструктивных особенностей Вашего дома и работ связанных с монтажом, мы рекомендуем воспользоваться услугами специалистов-монтажников <span>тел. 8 (985) 308-83-16</span>.</p>
-		</div>
-</transition>
-		<div v-show="!attention" class="chimney_attention-hight"></div>
-
-		</div>
-	</div>
-
-<script>
-
-  var app = new Vue({
-    el: '#add',
-		data: {
-			way:{
-				type: null,
-				isActive: false
-			},
-			diam: {
-				type: null,
-				show: false
-			},
-			hight: {
-				type: null,
-				show: false
-			},
-			demand: '',
-			attention: false,
-			reqestlist: {
-				nasad: {
-					130: '1602, 1659, 1617, 1650, 1573, 1561, 1656, 1644, 1638',
-					150: '1603, 1660, 1619, 1651, 1574, 1562, 1657, 1645, 1639',
-					200: '1604, 1661, 1618, 1652, 1575, 1563, 1658, 1646, 1640'
-				},
-				nasten: {
-					130: '1605, 1564, 1579, 1632, 1596, 1617, 1650, 1573, 1561, 1656',
-					150: '1606, 1565, 1579, 1633, 1597, 1619, 1651, 1574, 1562, 1657',
-					200: '1607, 1566, 1579, 1634, 1598, 1618, 1652, 1575, 1563, 1658'
-				}
-
-			},
-			items: {
-				show: false
-			}
-		},
-		methods: {
-			chooseWay: function(event) {
-				this.way.type = event.currentTarget.getAttribute('data-typeinstal');
-				let elemWay = document.querySelectorAll('.chimney_way_img-block');
-				for(let i=0; i < elemWay.length; i++) {
-					elemWay[i].classList.remove('chimney_way-active');
-				}
-				event.currentTarget.classList.add('chimney_way-active');
-				this.diam.show = true;
-				//console.log(document.querySelectorAll('.chimney_way_img-block'))
-			},
-			chooseDiam: function name(even) {
-				this.diam.type = even.target.dataset.diam;
-				let elemWay = document.querySelectorAll('.chimney_diam-item');
-				for(let i=0; i < elemWay.length; i++){
-					elemWay[i].classList.remove('chimney_diam-active');
-				}
-				event.currentTarget.classList.add('chimney_diam-active');
-				this.hight.show = true;
-				//console.log(this.diam.type)
-			},
-			chooseHight: function (event) {
-				this.hight.type = event.target.value
-				this.demand = this.reqestlist[this.way.type][this.diam.type];
-				console.log(this.demand)
-			}
-		},
-		 watch: {
-		 	demand: function (val) {
-		 			//alert(this.demand)
-
-					 this.items.show = true;
-
-					 //alert('TRUE!!!');
-					 setTimeout(function () { app.attention = true }, 3000);
-		 		}
-		 }
-  })
-
-</script>
-
-
-
-
-
-
-
-
-	</div>	<!-- END - CONTAINER -->
+	<! -- END - CONTAINER -->
 
 	<footer>
 		<div class="foot_soc">

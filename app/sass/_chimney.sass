@@ -73,6 +73,7 @@
 	width: 100%
 	min-height: .01%
 	overflow-x: auto
+	margin-bottom: 50px
 .chimney_list
 	width: 70%
 	border-collapse: collapse
@@ -127,25 +128,44 @@
 	td:nth-child(1)
 		text-align: left
 		padding: 7px 25px
+.chimney_attention-hight
+	min-height: 314px
+.chimney_attention
+	width: 70%
+	background-color: #fff
+	border: 1px solid $gray
+	padding: 15px
+	span
+		white-space: nowrap
+		font-weight: 600
+		font-style: italic
+
 
 .fade-enter-active, .fade-leave-active
 	transition: opacity .5s
-
 .fade-enter, .fade-leave-to
 	opacity: 0
 
+.atten-enter-active, .atten-leave-active
+	transition: all 1s ease-in-out
+.atten-enter, .atten-leave-to
+	opacity: 0
+
 @media only screen and (max-width : 1200px)
-	.chimney_list
+	.chimney_list,
+	.chimney_attention
 		width: 80%
+
 @media only screen and (max-width : 992px)
-	.chimney_list
+	.chimney_list,
+	.chimney_attention
 		width: 90%
 @media only screen and (max-width : 768px)
-	.chimney_list
+	.chimney_list,
+	.chimney_attention
 		width: 100%
 @media only screen and (max-width : 420px)
 	.chimney_way-wrap
 		width: 100%
-
 	.chimney_diam-wrap
 		width: 100%
