@@ -283,6 +283,183 @@
 	float: right
 	margin: 0 0 10px 10px
 
+
+
+.power_img-wrapout
+	width: 100%
+	height: auto
+.power_img-wrapin
+	display: flex
+	justify-content: center
+
+
+.power_horizont
+	width: 35px
+	display: flex
+	flex-direction: column
+	//flex-wrap: wrap
+	justify-content: center
+	align-items: center
+.power_img-empty
+	width: 35px
+	height: 28px
+	margin-bottom: 15px
+
+.power_img-wight
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+	width: 100%
+	margin: 0 0 15px 15px
+	span
+		text-align: center
+		font-style: italic
+.power_img-linehor
+	width: 99%
+	height: 2px
+	background: $gray
+	position: relative
+	text-align: center
+
+.power_img-linehor:before
+	content: ''
+	position: absolute
+	left: -2px
+	top: -4px
+	width: 0
+	height: 0
+	border-style: solid
+	border-width: 5px 10px 5px 0
+	border-color: transparent $gray transparent transparent
+.power_img-linehor:after
+	content: ''
+	position: absolute
+	right: -2px
+	top: -4px
+	width: 0
+	height: 0
+	border-style: solid
+	border-width: 5px 0 5px 10px
+	border-color: transparent transparent transparent $gray
+
+
+.power_vert
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+	align-items: center
+	height: 100%
+
+.power_img-hight
+	width: 35px
+	height: 100%
+	display: flex
+	flex-direction: column
+	flex-wrap: wrap
+	justify-content: center
+	align-items: flex-end
+	position: relative
+	span
+		display: block
+		position: absolute
+		left: -10px
+		font-style: italic
+		margin: 0 auto
+
+.power_img-linever
+	width: 2px
+	height: 100%
+	align-items: stretch
+	border: 1px solid $gray
+	background: $gray
+	position: relative
+.power_img-linever:before
+	content: ''
+	position: absolute
+	top: -5px
+	left: -5px
+	width: 0
+	height: 0
+	border-style: solid
+	border-width: 0 5px 10px 5px
+	border-color: transparent transparent $gray transparent
+.power_img-linever:after
+	content: ''
+	position: absolute
+	bottom: -5px
+	left: -5px
+	width: 0
+	height: 0
+	border-style: solid
+	border-width: 10px 5px 0 5px
+	border-color: $gray transparent transparent transparent
+
+
+.power_img-size
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+	align-items: flex-start
+	flex-grow: 1
+	height: 100%
+	background-color: #fff
+	border: 3px solid $accent
+	border-radius: 3px
+	margin-left: 15px
+
+
+
+.power_select-wrap
+	display: flex
+
+
+.power_select-item
+	display: flex
+	margin-right: 50px
+.power_select-name
+	font-weight: bold
+	margin-right: 15px
+.power_select
+	width: 100px
+	height: 30px
+	padding-left: 10px
+
+
+.power_img-infowrap
+	border: 1px solid $gray
+	border-radius: 5px
+	background-color: $body
+	padding: 15px
+	margin-top: 25px
+
+
+.power_img-info_p
+	margin: 0
+	font-size: .9em
+	font-style: italic
+	span
+		color: green
+		font-weight: 700
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media only screen and (max-width : 1140px)
 	.oferTxt
 		right: 15px
@@ -316,6 +493,10 @@
 	.morsoinfo_wrap
 		display: none
 
+	.power_select-item
+		margin-right: 25px
+
+
 @media only screen and (max-width : 480px)
 	.stock_a
 		margin: 0
@@ -329,3 +510,13 @@
 
 	.uf_info-btn-r
 		margin: 20px auto
+
+@media only screen and (max-width : 415px)
+	.power_select-wrap
+		justify-content: space-around
+	.power_select-item
+		flex-direction: column
+		margin-right: 0
+		margin-bottom: 20px
+	.power_select-name
+		margin: 0 auto 5px auto

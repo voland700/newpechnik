@@ -23,6 +23,9 @@
 	<!-- Custom Browsers Color End -->
 	<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 	  crossorigin="anonymous"></script>
+	<!-- vue.js cdn -->
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+
 	<link rel="stylesheet" href="css/main.min.css">
 </head>
 
@@ -243,11 +246,179 @@
 	</div>
 
 	<div class="container">
-
-
+<!--
 <img src="/img/schiedel-uni-Ihight.jpg" alt="Jпределить высоту дымохода Schiedel UNI" class="garbage_right_350">
 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime modi nobis recusandae magni porro illum mollitia ea, consequuntur doloribus itaque unde aut reiciendis sit quidem, natus, qui impedit incidunt exercitationem!</p>
-<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit, iure voluptatum quibusdam dolor quos ea voluptates doloribus magnam cumque culpa debitis excepturi reiciendis at quasi totam, aliquid asperiores sit veniam? Deleniti quae ipsam hic at nostrum adipisci ducimus voluptatem non nemo, sit minus accusamus consequuntur consequatur error, quaerat ad quia?</p>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit, iure voluptatum quibusdam dolor quos ea voluptates doloribus magnam cumque culpa debitis excepturi reiciendis at quasi totam, aliquid asperiores sit veniam? Deleniti quae ipsam hic at nostrum adipisci ducimus voluptatem non nemo, sit minus accusamus consequuntur consequatur error, quaerat ad quia?</p>-->
+
+
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates, esse aliquam iure temporibus dicta nostrum, nemo animi culpa totam repellendus recusandae dolorum. Mollitia quisquam delectus eveniet illo ratione dignissimos vero veniam sunt deleniti aspernatur ab, repellat aliquid iste quasi fuga perspiciatis corrupti quis necessitatibus officia. Voluptas quisquam quia dolorem deserunt.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error maiores voluptatibus esse corrupti voluptate, autem obcaecati laboriosam quidem minus sunt expedita fugiat amet unde quaerat at libero? Quibusdam illo saepe ab dolor facere soluta exercitationem?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe provident corrupti suscipit ad! Rem commodi tempora iusto nam sed sunt ullam. Magnam iste pariatur molestiae obcaecati, velit tenetur ut aliquam voluptas sequi labore deleniti rem minima perspiciatis! Illo, totam rem?</p>
+
+
+
+
+
+<div id="space">
+
+
+<div class="power_select-wrap">
+	<div class="power_select-item">
+		<p class="power_select-name">Длина: </p>
+		<select v-model="long" @change="GetLong" class="power_select">
+			<option value="2.5">2,5 м</option>
+			<option value="3">3,0 м</option>
+			<option value="3.5">3,5 м</option>
+			<option value="4">4,0 м</option>
+			<option value="4.5">4,5 м</option>
+			<option value="5">5,0 м</option>
+			<option value="5.5">5,5 м</option>
+			<option value="6">6,0 м</option>
+			<option value="6.5">6,5 м</option>
+			<option value="7">7,0 м</option>
+			<option value="7.5">7.5 м</option>
+		</select>
+	</div>
+
+	<div class="power_select-item">
+		<p class="power_select-name">Ширина: </p>
+		<select v-model="width" @change="GetWidth" class="power_select">
+			<option value="2.5">2,5 м</option>
+			<option value="3">3,0 м</option>
+			<option value="3.5">3,5 м</option>
+			<option value="4">4,0 м</option>
+			<option value="4.5">4,5 м</option>
+			<option value="5">5,0 м</option>
+			<option value="5.5">5,5 м</option>
+			<option value="6">6,0 м</option>
+			<option value="6.5">6,5 м</option>
+			<option value="7">7,0 м</option>
+			<option value="7.5">7,5 м</option>
+		</select>
+	</div>
+</div>
+
+
+
+
+	<div class="power_img-wrapout" >
+		<div v-show="show" class="power_img-wrapin">
+			<div class="power_horizont">
+					<div class="power_img-empty"></div>
+					<div class="power_img-hight">
+						<span>{{ width +'м' }}</span>
+						<div class="power_img-linever"></div>
+					</div>
+			</div>
+			<div class="power_vert">
+					<div class="power_img-wight">
+						<span>{{ long +'м' }}</span>
+						<div class="power_img-linehor"></div>
+					</div>
+					<div class="power_img-size" v-bind:style="{height: sizeLong + 'px', width: sizeWigth + 'px'}">
+						<div class="power_img-infowrap">
+							<p class="power_img-info_p">Площадь помещения: <span>{{ surface + ' м2' }}</span></p>
+							<p class="power_img-info_p">Мощность печи: <span>{{ power + ' кВт' }}</span></p>
+						</div>
+					</div>
+			</div>
+
+		</div>
+	</div>
+
+</div>
+
+<script>
+	let space = new Vue({
+ 		el: '#space',
+		data: {
+			long: 0,
+			width: 0,
+			sizeLong: 0,
+			sizeWigth: 0,
+			show: false,
+			power: 0,
+			surface: 0
+
+		},
+		methods: {
+			GetLong: function(event){
+				this.long = event.target.value;
+			},
+			GetWidth: function(event) {
+				this.width = event.target.value;
+
+				//console.log(this.long)
+			}
+
+
+		},
+		watch: {
+			long: function (val) {
+				if(this.long > 0 && this.width > 0) {
+					let wide = document.querySelector('.power_select-wrap').offsetWidth;
+					let ratio = 0;
+					let sum = (this.long * this.width * 2.5) / 14;
+					this.power = sum.toFixed(1);
+
+					this.surface = (this.long * this.width);
+
+
+					if (wide > 1000) {
+						ratio = (wide * 0.8) / 7.5;
+					} else {
+						ratio = wide / 7.5;
+					}
+
+
+					this.sizeLong = ratio * this.long;
+					this.sizeWigth = ratio * this.width;
+
+
+
+
+					this.show = true;
+
+					console.log(ratio + ' - ratio;  ' + this.sizeLong + ' д/ш ' + 	this.sizeWigth)
+					}
+			},
+			width: function (val) {
+				if(this.long > 0 && this.width > 0) {
+					let wide = document.querySelector('.power_select-wrap').offsetWidth;
+					let ratio = 0;
+					let sum = (this.long * this.width * 2.5) / 14;
+					this.power = sum.toFixed(1);
+
+					this.surface = (this.long * this.width);
+
+
+					if (wide > 1000) {
+						ratio = (wide * 0.8) / 7.5;
+					} else {
+						ratio = wide / 7.5;
+					}
+
+
+					this.sizeLong = ratio * this.long;
+					this.sizeWigth = ratio * this.width;
+
+					this.show = true;
+
+					console.log(ratio + ' - ratio;  ' + this.sizeLong + ' д/ш ' + this.sizeWigth)
+				}
+			}
+		}
+
+
+
+
+
+
+
+	})
+
+</script>
 
 
 
