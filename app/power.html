@@ -246,135 +246,196 @@
 	</div>
 
 	<div class="container">
-
-<div class="atricle_wrap">
-	<img class="atricle_main-img" src="https://www.pechnik.su/upload/iblock/021/b55d0dbaae73c8061f5fcb1d4ca50153.jpg" alt="Установка печи-камина Jotul в загородном доме" title="Установка печи-камина Jotul в загородном доме">
-
-
-
+<!--
+<img src="/img/schiedel-uni-Ihight.jpg" alt="Jпределить высоту дымохода Schiedel UNI" class="garbage_right_350">
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime modi nobis recusandae magni porro illum mollitia ea, consequuntur doloribus itaque unde aut reiciendis sit quidem, natus, qui impedit incidunt exercitationem!</p>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit, iure voluptatum quibusdam dolor quos ea voluptates doloribus magnam cumque culpa debitis excepturi reiciendis at quasi totam, aliquid asperiores sit veniam? Deleniti quae ipsam hic at nostrum adipisci ducimus voluptatem non nemo, sit minus accusamus consequuntur consequatur error, quaerat ad quia?</p>-->
 
 
-<p>При выборе печи нужно помнить о необходимости дымохода, и предстоящих затрат на его покупку и монтаж. Современные модульные дымоходы, состоят из элементов и удобны в сборке. На первый взгляд их установка не требует особых навыков и умений, и не составит труда установить дымоход своими руками. Однако, при кажущейся простоте сборки современного модульного дымохода, мы рекомендуем обращаться к услугам специалистов - монтажников, так как при сборке дымохода необходимо учитывать ряд важных параметров.</p>
-<p>Несоблюдение правил установки дымохода может привести к неправильной работе печи, отсутствию тяги и задымлению, а в особо тяжёлом случае к пожару.</p>
-<p>Поговорим о важных факторах, которые необходимо учитывать при установке дымохода своими руками, о проблемах с которыми Вы можете столкнуться, а так же почему мы рекомендуем для монтажа дымоходов прибегать в услугам профессионалов.</p>
-<p>Прежде всего, если вы не имеете опыта в установке печей, каминов и дымоходов, и приняли решение купить и установить дымоход самостоятельно Вам стоит ответить для себя на ряд вопросов:</p>
-<ul>
-	<li><a href="#way">Способы установки и подключения дымохода</a></li>
-	<li><a href="#long">Какая должна быть длина дымохода</a></li>
-	<li><a href="#diam">Какой нужен диаметр дымохода</a></li>
-	<li><a href="#ppy">Противопожарные узлы и прохождение дымохода через стены или кровлю</a></li>
-	<li><a href="#still">Какой дымоход выбрать, стальной или керамический</a></li>
-	<li><a href="#price">Факторы влияющие на стоимость дымохода</a></li>
-</ul>
-<section>
-	<h3><a name="way">Способы установки и подключения дымохода</a></h3>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates, esse aliquam iure temporibus dicta nostrum, nemo animi culpa totam repellendus recusandae dolorum. Mollitia quisquam delectus eveniet illo ratione dignissimos vero veniam sunt deleniti aspernatur ab, repellat aliquid iste quasi fuga perspiciatis corrupti quis necessitatibus officia. Voluptas quisquam quia dolorem deserunt.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error maiores voluptatibus esse corrupti voluptate, autem obcaecati laboriosam quidem minus sunt expedita fugiat amet unde quaerat at libero? Quibusdam illo saepe ab dolor facere soluta exercitationem?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe provident corrupti suscipit ad! Rem commodi tempora iusto nam sed sunt ullam. Magnam iste pariatur molestiae obcaecati, velit tenetur ut aliquam voluptas sequi labore deleniti rem minima perspiciatis! Illo, totam rem?</p>
 
-	<p>Каким способом будет подключается дымоход к Вашей печи или камину: задние, боковое или верхнее подключение.</p>
 
-<div class="images_articl-list">
-	<figure class="fig-item rw30">
-		<img src="/img/imgdel/forgarbige/back-way.jpg" alt="Заднее подключение дымохода" class="fig-img">
-		<figcaption class="fig-title">Заднее подключение дымохода</figcaption>
-	</figure>
 
-	<figure class="fig-item rw30">
-		<img src="/img/imgdel/forgarbige/top-way.jpg" alt="Верхнее подключение дымохода" class="fig-img">
-		<figcaption class="fig-title">Верхнее подключение дымохода</figcaption>
-	</figure>
+
+
+<div id="space">
+
+
+<div class="power_select-wrap">
+	<div class="power_select-item">
+		<p class="power_select-name">Длина: </p>
+		<select v-model="long" @change="GetLong" class="power_select">
+			<option value="2.5">2,5 м</option>
+			<option value="3">3,0 м</option>
+			<option value="3.5">3,5 м</option>
+			<option value="4">4,0 м</option>
+			<option value="4.5">4,5 м</option>
+			<option value="5">5,0 м</option>
+			<option value="5.5">5,5 м</option>
+			<option value="6">6,0 м</option>
+			<option value="6.5">6,5 м</option>
+			<option value="7">7,0 м</option>
+			<option value="7.5">7.5 м</option>
+		</select>
+	</div>
+
+	<div class="power_select-item">
+		<p class="power_select-name">Ширина: </p>
+		<select v-model="width" @change="GetWidth" class="power_select">
+			<option value="2.5">2,5 м</option>
+			<option value="3">3,0 м</option>
+			<option value="3.5">3,5 м</option>
+			<option value="4">4,0 м</option>
+			<option value="4.5">4,5 м</option>
+			<option value="5">5,0 м</option>
+			<option value="5.5">5,5 м</option>
+			<option value="6">6,0 м</option>
+			<option value="6.5">6,5 м</option>
+			<option value="7">7,0 м</option>
+			<option value="7.5">7,5 м</option>
+		</select>
+	</div>
 </div>
-	<p>Каким способом будет установлен дымоход:
-		<ul>
-			<li>насадной с верхним подключением, проходящим в верх через кровлю и межэтажные перекрытия;</li>
-			<li>настенный, проходящий через стену, и уходящий в верх с по несущей стене дома.</li>
-		</ul>
-	</p>
-
-<div class="images_articl-list">
-	<figure class="fig-item rw30">
-		<img src="/img/imgdel/forgarbige/nasadnoy.jpg" alt="Насадной способ установки дымохода" class="fig-img">
-		<figcaption class="fig-title">Насадной способ установки дымохода</figcaption>
-	</figure>
-
-	<figure class="fig-item rw30">
-		<img src="/img/imgdel/forgarbige/nastenyi.jpg" alt="Настенный способ установки дымохода" class="fig-img">
-		<figcaption class="fig-title">Настенный способ установки дымохода</figcaption>
-	</figure>
-</div>
-	<p>Сразу отметим, что цена дымохода установленного настенным способом будет выше, так как данный способ потребует использования большего количества элементов, например опорной консоли, промежуточного опорного элемента, емкости для сбора конденсата, тройника. </p>
-
-</section>
-<section>
-<h3><a name="long">Какая должна быть длина дымохода</a></h3>
-	<p>Специалисты при определении высоты дымохода учитывают ряд параметров: высоту конька крыши и расстояние от него до выхода дымохода, форму крыши здания, наличие рядом отдельно стоящих зданий и высоких деревьев, розу ветров и другие. Все это на первый взгляд может показаться не важным, однако все эти параметры могут повлиять на наличие тяги в печи.</p>
-</section>
-	<section>
-		<h3><a name="diam">Какой диаметр дымохода</a></h3>
-		<p>Конечно, производители печей и каминов указывают какой диаметр дымохода необходим. Это можно увидеть в документации к отопительному прибору. Чаще всего это дымоходы имеющие стандартный диаметр например: ∅ 120 мм, ∅ 130 мм, ∅ 150 мм и так далее.</p>
-			<p>Однако случается производители указывают диаметр подключения не стандартных размеров: например 136 мм. В таком случае Вам понадобится специальный переходник для подключения к дымоходу стандартного диаметра. Нужно поинтересоваться о наличии необходимого переходника у производителя или продавца печей – каминов.</p>
-	</section>
-	<section>
-		<h3><a name="ppy">Противопожарные узлы и прохождение дымохода через стены и кровлю</a></h3>
-		<p>Прежде чем выбрать и сформировать список необходимых элементов и купить дымоход, необходимо предусмотреть, как правильно в соответствии с нормами пожарной безопасности с использованием теплоизоляции обустроить противопожарные проходные узлы через кровлю, прекрытия или стену дома. </p>
-
-<div class="images_articl-list">
-	<figure class="fig-item rw25">
-		<img src="/img/imgdel/forgarbige/ppy-flor.jpg" alt="Проход дымохода через межэтажные перекрытия" class="fig-img">
-		<figcaption class="fig-title">Проход дымохода через межэтажные перекрытия</figcaption>
-	</figure>
-
-	<figure class="fig-item rw25">
-		<img src="/img/imgdel/forgarbige/ppy-kovlia.jpg" alt="Проход дымохода через кровлю" class="fig-img">
-		<figcaption class="fig-title">Проход дымохода через кровлю</figcaption>
-	</figure>
-
-	<figure class="fig-item rw25">
-		<img src="/img/imgdel/forgarbige/ppy-woll.jpg" alt="Проход дымохода через стену дома" class="fig-img">
-		<figcaption class="fig-title">Проход дымохода через стену дома</figcaption>
-	</figure>
-</div>
-		<p>Так же, до установки насадного дымохода важно определить где будет организован проход через кровлю. Случается, когда при установке дымохода своими руками, клиент сразу не учитывает особенности здания, и в результате получает сюрприз – оказывается при прохождении межэтажного перекрытия или потолка, дымоход упирается в несущую балку. Приходится решать возникшую проблему: переносить место установки печи или изменять конфигурацию дымохода. В данном случае, для отгибания препятствия приходится покупать и устанавливать дополнительные элементы дымохода, например колено под углом. Допустимо использовать горизонтальные участки до 1 метра, более метра крайне не желательно, так такие искривления дымохода, могут негативно сказаться на тяге и работе печи. Так же, при наличии горизонтальных участков рекомендуется увеличить высоту дымохода, что соответственно увеличивает его стоимость.</p>
-
-<div class="images_articl-list">
-	<figure class="fig-item rw30">
-		<img src="/img/imgdel/forgarbige/balka.jpg" alt="Дымоход огибает балку межэтажного перекрытия" class="fig-img">
-		<figcaption class="fig-title">Дымоход огибает балку межэтажного перекрытия</figcaption>
-	</figure>
-
-	<figure class="fig-item rw30">
-		<img src="/img/imgdel/forgarbige/window.jpg" alt="Дымоход огибает окно дома" class="fig-img">
-		<figcaption class="fig-title">Дымоход огибает окно дома </figcaption>
-	</figure>
-</div>
-	</section>
-	<section>
-		<h3><a name="still">Какой дымоход выбрать, стальной или керамический</a></h3>
-		<p>Для установки отдельно стоящей печи-камина лучшим, оптимальным выбором будет использование стального дымохода из нержавеющей стали. Использование керамического дымохода конечно вполне допустимо, но менее рационально, так как стоимость керамического дымохода будет выше, а установка сложнее и трудозатратнее.</p>
-		<p>Установка керамического дымохода будет более оптимальным решением при использовании каминов с топками большой мощности.</p>
-	</section>
-	<section>
-		<h3><a name="price">Факторы влияющие на стоимость дымохода</a></h3>
-		<p>Каждый понимает, что <a href="/catalog/dymokhody/">цена дымохода</a> зависит от его качества. Рассмотрим основные факторы влияют на качество и в конечном итоге цену дымохода.</p>
-		<p>Дымоходы из нержавеющей стали бывают двух типов:
-			<ul>
-				<li>простые одностенные, более дешёвые по цене</li>
-				<li>двустенные сэндвич дымоходы состоящие из двух стальных труб, пространство между которыми заполнено утеплителем.</li>
-			</ul>
-		</p>
-		<p>Наличие утеплителя, его вид и размер так же сказываются на цене. В стальных сэндвич дымоходах Российского производства в качестве утеплителя чаще используется базальтовое волокно, толщиной 25 – 50мм. А к примеру, в получивших на рынке России заслуженное признание Немецких дымоходах Schiedel Permeter, используется более долговечный материал Superwool. Понятно, что немецкий дымоход Schiedel, по цене буде дороже отечественного, но не только за счет известности бренда, в первую очередь за высокое качество более длительный срок службы.</p>
-		<p>Для стальных дымоходов производители используют различные марки стали, икоторые так же влияют на качество и цену дымохода. В России производители дымоходов в основном используют следующие марки нержавеющей стали:</p>
-		<ol>
-			<li><strong>AISI 409</strong> – нержавеющая сталь, с небольшим добавлением титана, такие дымоходы стоят относительно не дорого, но и считаются менее прочными и долговечными.</li>
-			<li><strong>AISI 321</strong> нержавеющая сталь имеет добавки титана, хрома и повышенное содержание углерода. Дымоход из нержавеющей стали марки AISI 321 – легко выдерживает температуру до 800 °С и менее подвержен коррозии. Срок его службы гораздо больше, но и стоимость дымохода будет выше.</li>
-		</ol>
-		<p>Конечно для использования в своем жилом доме отдельно стоящей печи-камина, покупка стального сэндвич дымохода будет более рациональным решением. Вы можете в целях экономии купить более дешёвый дымоход, который прослужит не долго, и через несколько лет его придется менять. С учетом затрат на демонтажа старого дымохода, покупкой и установкой нового, в конечном итоге с экономить не получится. Можно сразу <a href="/catalog/dymokhody/">купить дымоход</a> дороже, но качественней, и на долгие годы забыть о проблемах. </p>
-		<p>При установке печей-каминов, и монтаже дымоходов, по выше приведенным причинам, мы рекомендуем обращаться к профессионалам. Они помогут Вам избежать многих проблем. Кроме того, профессиональные компании, дают гарантию на свои работы. Учитывая, что многие специалисты выезжают на место будущего монтажа для консультаций, составления сметы бесплатно, возможно будет удобнее прибегнуть к их услугам.</p>
-		<p>Если Вы приняли решение купить и установить дымоход самостоятельно, добро пожаловать в Печной центр Ясенево. Опытные специалисты печного центра дадут консультации, помогут принять правильное решение, и избежать возможных проблем при установке дымохода своими руками.</p>
-	</section>
 
 
 
+
+	<div class="power_img-wrapout" >
+		<div v-show="show" class="power_img-wrapin">
+			<div class="power_horizont">
+					<div class="power_img-empty"></div>
+					<div class="power_img-hight">
+						<span>{{ width +'м' }}</span>
+						<div class="power_img-linever"></div>
+					</div>
+			</div>
+			<div class="power_vert">
+					<div class="power_img-wight">
+						<span>{{ long +'м' }}</span>
+						<div class="power_img-linehor"></div>
+					</div>
+					<div class="power_img-size" v-bind:style="{height: sizeLong + 'px', width: sizeWigth + 'px'}">
+						<div class="power_img-infowrap">
+							<p class="power_img-info_p">Площадь помещения: <span>{{ surface + ' м2' }}</span></p>
+							<p class="power_img-info_p">Мощность печи: <span>{{ power + ' кВт' }}</span></p>
+						</div>
+					</div>
+			</div>
+
+		</div>
+	</div>
 
 </div>
+
+<script>
+	let space = new Vue({
+ 		el: '#space',
+		data: {
+			long: 0,
+			width: 0,
+			sizeLong: 0,
+			sizeWigth: 0,
+			show: false,
+			power: 0,
+			surface: 0
+
+		},
+		methods: {
+			GetLong: function(event){
+				this.long = event.target.value;
+			},
+			GetWidth: function(event) {
+				this.width = event.target.value;
+
+				//console.log(this.long)
+			}
+
+
+		},
+		watch: {
+			long: function (val) {
+				if(this.long > 0 && this.width > 0) {
+					let wide = document.querySelector('.power_select-wrap').offsetWidth;
+					let ratio = 0;
+					let sum = (this.long * this.width * 2.5) / 14;
+					this.power = sum.toFixed(1);
+
+					this.surface = (this.long * this.width);
+
+
+					if (wide > 1000) {
+						ratio = (wide * 0.8) / 7.5;
+					} else {
+						ratio = wide / 7.5;
+					}
+
+
+					this.sizeLong = ratio * this.long;
+					this.sizeWigth = ratio * this.width;
+
+
+
+
+					this.show = true;
+
+					console.log(ratio + ' - ratio;  ' + this.sizeLong + ' д/ш ' + 	this.sizeWigth)
+					}
+			},
+			width: function (val) {
+				if(this.long > 0 && this.width > 0) {
+					let wide = document.querySelector('.power_select-wrap').offsetWidth;
+					let ratio = 0;
+					let sum = (this.long * this.width * 2.5) / 14;
+					this.power = sum.toFixed(1);
+
+					this.surface = (this.long * this.width);
+
+
+					if (wide > 1000) {
+						ratio = (wide * 0.8) / 7.5;
+					} else {
+						ratio = wide / 7.5;
+					}
+
+
+					this.sizeLong = ratio * this.long;
+					this.sizeWigth = ratio * this.width;
+
+					this.show = true;
+
+					console.log(ratio + ' - ratio;  ' + this.sizeLong + ' д/ш ' + this.sizeWigth)
+				}
+			}
+		}
+
+
+
+
+
+
+
+	})
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
