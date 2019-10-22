@@ -1,0 +1,293 @@
+@import "vars"
+
+@keyframes showUp
+	from
+		display: block
+		opacity: 0
+	to
+		opacity: 1
+
+@keyframes showOut
+	from
+		opacity: 1
+	to
+		opacity: 0
+		display: none
+
+
+.container
+	.appear
+		animation-duration: .7s
+		animation-fill-mode: both
+		animation-name: showUp
+		display: block
+
+	.disappear
+		animation-duration: .5s
+		animation-fill-mode: both
+		animation-name: showOut
+
+
+.tester-start
+	display: none
+
+.tester-brick
+	display: none
+
+.tester-brick-wrap
+	display: flex
+	justify-content: center
+
+
+	.choice
+		background-color: rgba(#0aa420, .1)
+		border-color: rgba(green, .5)
+
+.tester-brick-wrap-one
+	width: 200px
+	display: flex
+	flex-direction: column
+	margin: 0 10px
+
+
+.tester-brick-elem
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 100%
+	height: 100px
+	background-color: #fff
+	border: 1px solid $gray
+	border-radius: 5px
+	margin-bottom: 15px
+	padding: 15px
+	text-align: center
+	font-size: .9em
+	font-weight: 700
+	cursor: pointer
+	transition: all .2s ease-in-out
+	order: 4
+	&:hover
+		box-shadow: 0 0 6px rgba(122,122,122,.2)
+		border-color: rgba(green, .5)
+
+.tester-elem
+	display: none
+
+.tester-elem-choice,
+.tester-brick-choice
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 100%
+	height: 100px
+	border-radius: 5px
+	margin-bottom: 15px
+	padding: 15px
+	text-align: center
+	font-size: .9em
+	font-weight: 700
+	border: 1px solid rgba(green, .5)
+	background-color: rgba(#0aa420, .1)
+	transition: all 1s ease-in-out
+
+
+.tester-elem-error,
+.tester-brick-error
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 100%
+	height: 100px
+	border-radius: 5px
+	margin-bottom: 15px
+	padding: 15px
+	text-align: center
+	font-size: .9em
+	font-weight: 700
+	border: 1px solid rgba(red, .5)
+	background-color: rgba(red, .1)
+	transition: all 1s ease-in-out
+
+
+
+.tester-brick-wrap-two
+	width: 200px
+	display: flex
+	flex-direction: column
+	margin: 0 10px
+.tester-brick-img
+	width: 100%
+
+
+.tester-brick-wrap-three
+	width: 200px
+	display: flex
+	flex-direction: column
+	margin: 0 10px
+
+.tester-elem-wrap
+	display: flex
+	justify-content: center
+	.choice
+		background-color: rgba(#0aa420, .1)
+		border-color: rgba(green, .5)
+
+.tester-elem-wrap-one,
+.tester-elem-wrap-two
+	width: 200px
+	display: flex
+	flex-direction: column
+	margin: 0 15px
+
+.tester-elem-elem
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 100%
+	height: 100px
+	background-color: #fff
+	border: 1px solid $gray
+	border-radius: 5px
+	margin-bottom: 15px
+	padding: 15px
+	text-align: center
+	font-size: .9em
+	font-weight: 700
+	cursor: pointer
+	transition: all .2s ease-in-out
+	order: 7
+	&:hover
+		box-shadow: 0 0 6px rgba(122,122,122,.2)
+		border-color: rgba(green, .5)
+
+.tester-elem-img
+	width: 100%
+
+
+.tester_quest-wrup
+	min-height: 380px
+	display: none
+
+	h3
+		display: inline-block
+		padding-bottom: 20px
+		margin-bottom: 25px
+		border-bottom: 1px solid $gray
+
+.tester_quest-p
+	display: block
+	width: 40%
+	background-color: #fff
+	border: 1px solid $gray
+	border-radius: 5px
+	padding: 10px 15px
+	font-style: italic
+	cursor: pointer
+	transition: all .2s ease-in-out
+
+
+	&:hover
+		box-shadow: 0 0 6px rgba(122,122,122,.2)
+		border-color: rgba(green, .5)
+
+
+
+
+.tester_resault
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 100%
+	min-height: 350px
+.tester_resault-wrap
+	width: 60%
+	margin: 50px auto
+	.excellent
+		color: #0aa420
+	.sufficient
+		color: #2b5849
+	.insufficient
+		color: #95051d
+.tester_resault-mark
+	font-size: 2rem
+	font-weight: 700
+	text-align: center
+.tester_resault-balls
+	text-align: center
+	text-align: center
+	font-style: italic
+	color: lighten($darck, 5%)
+	margin-bottom: 25px
+.tester_resault-title
+	text-align: center
+
+.tester_analysis-step-1,
+.tester_analysis-step-2,
+.tester_analysis-step-3
+	margin-bottom: 50px
+.tester_analysis-step-2
+	border-bottom: 1px solid $gray
+
+
+
+
+
+.tester_analysis-one
+	margin-bottom: 25px
+	padding-bottom: 20px
+	border-bottom: 1px solid $gray
+
+	h3
+		text-align: center
+
+.tester_analysis-two
+	margin-bottom: 25px
+	padding-bottom: 20px
+
+	h3
+		text-align: center
+
+.tester_analysis-three
+	margin-bottom: 1.5rem
+.tester_analysis-question
+	margin-bottom: .3rem
+	color: #182c4d
+
+.tester_quest-error
+	color: lighten($darck, 10%)
+	margin-bottom: 0
+.tester_quest-true
+	color: lighten($darck, 10%)
+
+.tester_quest-error-txt
+	color: $darck
+	font-style: italic
+	color:  #95051d
+	margin-left: 7px
+
+
+
+.tester_quest-true-txt
+	color: $darck
+	font-style: italic
+	color: #0aa420
+	margin-left: 7px
+
+
+@media only screen and (max-width : 980px)
+	.tester_quest-p
+		width: 60%
+
+@media only screen and (max-width : 767px)
+	.tester-brick-wrap-one,
+	.tester-brick-wrap-two,
+	.tester-brick-wrap-three
+		width: 30%
+	.tester_quest-wrup
+		min-height: auto
+	.tester_quest-p
+		width: 70%
+@media only screen and (max-width : 500px)
+	.tester_quest-p
+		width: 100%
