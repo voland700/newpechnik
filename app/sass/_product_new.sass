@@ -325,6 +325,16 @@
 		text-shadow: 1px 1px 1px rgba(43, 53, 69, 1)
 		border: 2px solid $accent
 
+.product-buy-btn:disabled,
+.product-buy-btn[disabled]
+	cursor: default
+	opacity: .9
+	&:hover
+		text-shadow: 1px 1px 1px rgba(43, 53, 69, .2)
+		border: 2px solid $gray
+
+
+
 
 .product-buy-btn-fast
 	display: block

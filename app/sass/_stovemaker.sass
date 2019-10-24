@@ -30,6 +30,7 @@
 
 .tester-start
 	display: none
+	margin: 40px 0
 
 .tester-brick
 	display: none
@@ -266,20 +267,21 @@
 	color:  #95051d
 	margin-left: 7px
 
-
-
 .tester_quest-true-txt
 	color: $darck
 	font-style: italic
 	color: #0aa420
 	margin-left: 7px
 
-
 @media only screen and (max-width : 980px)
+	.tester_resault-wrap
+		width: 80%
 	.tester_quest-p
 		width: 60%
 
 @media only screen and (max-width : 767px)
+	.tester_resault-wrap
+		width: 100%
 	.tester-brick-wrap-one,
 	.tester-brick-wrap-two,
 	.tester-brick-wrap-three
@@ -289,5 +291,10 @@
 	.tester_quest-p
 		width: 70%
 @media only screen and (max-width : 500px)
+	.tester_resault-mark
+		font-size: 1.6rem
 	.tester_quest-p
 		width: 100%
+@media only screen and (max-width : 400px)
+	.tester_resault-mark
+		font-size: 1.5rem
