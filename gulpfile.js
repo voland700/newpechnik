@@ -30,8 +30,9 @@ gulp.task('browser-sync', function() {
 			baseDir: 'app'
 		},
 		notify: false,
-		// tunnel: true,
-		// tunnel: "projectmane", //Demonstration page: http://projectmane.localtunnel.me
+		//tunnel: true,
+		//online: true,
+		//tunnel: "projectmane", //Demonstration page: http://projectmane.localtunnel.me
 	})
 });
 

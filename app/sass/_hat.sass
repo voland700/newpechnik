@@ -1,0 +1,286 @@
+@import "vars"
+
+.hat_wrap
+	display: flex
+	justify-content: space-between
+	padding: 15px 0
+
+.hat_Logo_wrap
+	width: 115px
+	display: flex
+	flex-direction: column
+
+.head_logo-hover
+	&:hover .hat_logo-title
+		transition: .3s
+		background: linear-gradient(#feb913, #f75821)
+		background-clip: text
+		color: transparent
+
+	&:hover .hat_logo-img #y_logo
+		fill: darken($accent, 5%)
+		transition: .3
+
+.hat_logo-img
+	width: 80px
+	margin: 0 auto
+.hat_logo-title
+	font-size: .9em
+	line-height: .9em
+	font-weight: 700
+	color: $darck
+	text-align: center
+	text-transform: uppercas
+	transition: .3s
+
+.hat_info_wrap
+	flex-grow: 1
+	display: flex
+	justify-content: space-between
+	padding: 0	15px
+
+.hat_info_yas
+	width: 66%
+
+.hat_info_yas_inner
+	display: flex
+	align-items: flex-start
+.hat_info_yas_info
+
+.hat_info_h3
+	font-size: 1.2em
+	line-height: 1.2em
+.hat_info_location
+	min-height: 30px
+	font-size: .8em
+	font-style: italic
+	line-height: .9em
+	margin-bottom: 3px
+	padding-bottom: 5px
+	i
+		margin-right: 5px
+
+
+.hat_info_yas_wrap
+	display: flex
+	justify-content: flex-start
+
+.hat_info_yas_elem
+	width: 50%
+	border-top: 1px solid #ece7de
+.hat_info_goods
+	font-size: .85em
+	line-height: 1em
+	margin: 7px 0 10px 0
+	font-weight: 500
+
+.hat_info_phone
+	font-size: 1em
+	line-height: 1em
+	margin-bottom: 10px
+	i
+		margin-right: 7px
+	.tel
+		color: $darck
+		text-decoration: none
+		transition: color 30ms ease-out
+		&:hover
+			color: darken($darck, 20%)
+
+.hat_info_dmit_wrap
+	width: 33%
+.hat_info_dm_elem
+	border-top: 1px solid #ece7de
+
+.hat_basket
+	width: 115px
+.hat_basket-img
+	width: 60px
+	margin: 0 auto
+	position: relative
+	a
+		display: block
+		height: 100%
+		transition: color 30ms ease-out
+
+	svg
+		fill: $darck
+		transition: .3s
+		cursor: pointer
+	a:hover,
+	a:focus
+		svg
+			fill: $accent
+
+.hat_basket-col
+	position: absolute
+	top: 0
+	left: 50%
+	transform: translateX(-32%)
+	font-size: 1em
+	font-weight: 600
+	line-height: 14px
+	padding: 3px 5px
+	background-color: #fff
+	border: 2px solid $accent
+	border-radius: 50%
+	cursor: pointer
+
+
+.hat_basket-sum
+	display: block
+	width: 100%
+	font-size: .9em
+	line-height: .9em
+	font-style: italic
+	text-align: center
+	margin: 3px auto 10px auto
+	color: $darck
+
+.hat_basket-link
+	display: block
+	font-size: .73em
+	font-weight: 700
+	text-transform: uppercase
+	text-align: center
+	text-decoration: underline
+	color: $darck
+	cursor: pointer
+	line-height: .9em
+	margin-bottom: 3px
+	transition: color 30ms ease-out
+	&:hover,
+	&:hover
+		color: $accent
+
+.btn_colme_mob2,
+.btn_colme2
+	display: block
+	width: 150px
+	margin: 7px auto auto auto
+	padding: 2px 8px 4px 7px
+	border: 2px solid lighten($darck, 10%)
+	border-radius: 7px
+	background-image: url(../img/icon/phonecenter.svg)
+	background-repeat: no-repeat
+	background-size: 35px 25px
+	background-position: 5px center
+	box-shadow: 0 0 6px rgba(122,122,122,.1)
+	cursor: pointer
+	transition: .3s
+	color: $darck
+	&:focus,
+	&:activ
+		outline: none !important
+.btn_colme_mob2
+	display: none
+.btn_colme2:hover
+	border: 2px solid $accent
+	box-shadow: 0 0 6px rgba(122,122,122,.8)
+	transition: .3s
+	text-decoration: none
+	color: darken($darck, 5%)
+
+.btn_colme-title2
+	width: 	100%
+	display: block
+	text-align: center
+	padding-left: 35px
+	font-size: .75em
+	text-transform: uppercase
+	line-height: 1em
+	font-weight: 600
+
+.btn_colme-title-smol2
+	width: 	100%
+	display: block
+	text-align: center
+	padding-left: 35px
+	font-size: .7em
+	line-height: 1em
+	font-weight: 400
+
++media-breakpoint-down(md)
+	.hat_wrap
+		flex-wrap: wrap
+		justify-content: space-between
+	.hat_Logo_wrap
+		width: 100px
+		order: 1
+	.hat_logo-img
+		width: 70%
+	.hat_info_wrap
+		flex-wrap: wrap
+		order: 4
+		margin-top: 5px
+		padding: 0
+
+	.hat_info_yas
+		width: 100%
+	.hat_info_dmit_wrap
+		display: none
+	.hat_info_yas_wrap
+		flex-wrap: wrap
+	.hat_info_yas_inner
+		display: none
+
+	.hat_info_yas_elem
+		width: 100%
+		display: flex
+		justify-content: space-between
+		border-top: none
+	.hat_info_goods
+		margin-top: 0
+
+	.mob-hiden
+		display: none
+
+	.btn_colme_mob2
+		line-height: 1
+		margin-top: 5px
+	.btn_colme2
+		display: none
+	.btn_colme_mob2
+		display: block
+		order: 2
+		margin: 15px auto auto
+	.hat_basket
+		width: 100px
+		order: 3
+	.hat_basket-img
+		width: 70px
+	.hat_basket-link
+		display: none
+
+@media only screen and (max-width : 500px)
+	.hat_Logo_wrap
+		width: 80px
+	.hat_logo-img
+		width: 60px
+	.hat_logo-title
+		display: none
+	.hat_basket
+		width: 80px
+	.hat_basket-img
+		width: 60px
+	.hat_basket-sum
+		display: none
+@media only screen and (max-width : 460px)
+	.hat_info_yas_elem
+		flex-wrap: wrap
+	.hat_info_goods
+		width: 100%
+	.hat_info_phone
+		width: 100%
+		text-align: right
+	.btn_colme_mob2
+		margin: auto
+@media only screen and (max-width : 370px)
+	.hat_Logo_wrap
+		width: 50px
+	.hat_logo-img
+		width: 100%
+	.hat_basket
+		width: 50px
+	.hat_basket-img
+		width: 100%

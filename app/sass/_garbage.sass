@@ -286,10 +286,6 @@
 	float: right
 	margin: 0 0 10px 10px
 
-
-
-
-
 .images_articl-list
 	display: flex
 	flex-wrap: wrap
@@ -307,7 +303,36 @@
 	color: #fc0
 	font-weight: 600
 
+.img_row
+	display: flex
+	flex-wrap: wrap
+	width: 100%
 
+	.img_elem
+		display: block
+		height: auto
+		margin: 20px auto
+		overflow: hidden
+		border-radius: 5px
+		box-shadow: 0 0 2px #999
+	figcaption
+
+
+
+
+
+
+
+	.el-2
+		width: 45%
+
+	.el-3
+		width: 28%
+
+
+.mg_path
+	display: block
+	width: 100%
 
 
 
@@ -361,6 +386,14 @@
 		width: 80%
 	.video_block-item
 		width: 100%
+
+	.img_row
+		.el-3
+			width: 45%
+
+		.img_elem
+			margin: 15px auto
+
 @media only screen and (max-width:768px)
 	.sert-tbl
 		display: none
@@ -379,6 +412,12 @@
 			width: 40%
 		.rw25
 			width: 40%
+
+	.img_row
+		.el-2
+			width: 90%
+
+
 
 
 @media only screen and (max-width : 500px)
@@ -399,6 +438,9 @@
 		.rw25
 			width: 80%
 
+	.img_row
+		.el-3
+			width: 90%
 
 
 @media only screen and (max-width : 450px)
