@@ -1,5 +1,134 @@
 @import "vars"
 
+
+@keyframes shine
+	100%
+		left: 125%
+
+.contacts_wrap
+
+.shine
+	&:hover,
+	&:focus
+		&::before
+			animation: shine .5s
+			opacity: 1
+
+.contacts_info_wrap
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-around
+	margin-bottom: 50px
+.contacts_info_item
+	width: 25%
+	display: flex
+	align-items: center
+	margin-top: 20px
+	margin-bottom: 20px
+
+.contacts_info_icon
+	flex: none
+	display: inline-block
+	width: 40px
+	height: 40px
+	line-height: 40px
+	font-size: 22px
+	text-align: center
+	color: #fff
+	border-radius: 50%
+	background-color: #ff6d00
+	margin: auto 12px auto 0
+.contacts_info_content
+	display: flex
+	flex-direction: column
+.contacts_info_name
+	width: 100%
+	font-size: .9em
+	//line-height: 12px
+	margin-bottom: 2px
+.contacts_info_txt
+	width: 100%
+	font-size: .9em
+	line-height: 1em
+	font-style: italic
+
+.contacts_wrap
+	margin-top: 20px
+.contacts_item
+	display: flex
+	padding: 15px 0 35px 0
+	border-top: 1px solid lighten($gray, 12%)
+
+	&:last-child
+		border-bottom: 1px solid lighten($gray, 12%)
+
+.contacts_item_img_wrap
+	width: 200px
+	height: auto
+	margin-right: 25px
+	flex: none
+
+.contacts_item_link_img
+	display: block
+	height: 100%
+.shine
+	position: relative
+	overflow: hidden
+	&::before
+		position: absolute
+		top: 0
+		left: -45%
+		z-index: 2
+		display: block
+		content: ''
+		width: 25%
+		height: 100%
+		opacity: 0
+		background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.2) 100%)
+		transform: skewX(-25deg)
+
+
+.contacts_item_img
+	width: 100%
+.contacts_item_content
+	display: flex
+	flex-direction: column
+
+
+	line-height: 1.2
+	i
+		display: inline-block
+		margin-right: 7px
+
+.contacts_item_title
+	a
+		color: $darck
+		transition: color .15s ease-in-out
+		&:hover
+			text-decoration: none
+			color: #ff6d00
+.contacts_item_p
+	margin-bottom: 5px
+.contacts_item_phone-list
+	margin-top: auto
+.contacts_item_phone
+	margin-bottom: 5px
+	a
+		transition: color .15s ease-in-out
+		color: #0c387a
+		&:hover
+			text-decoration: none
+			color: #ff6d00
+.contacts_phone_txt
+	font-size: .9em
+	font-style: italic
+	margin-right: 15px
+.contacts_phone_nam
+	white-space: nowrap
+
+
+
+
 .shop__item
 	width: 100%
 	height: auto
@@ -114,8 +243,68 @@
 	&:visited
 		color: $link
 		text-decoration: none
+.geo_link
+	margin: 10px 0 25px 0
+.shop__time,
+.geo_link
+	a
+		color: #3A539B
+		font-style: italic
+		transition: color .15s ease-in-out
+		&:hover
+			color: #ff6d00
+
+
+.contacts_gallery_wrap
+	display: flex
+	flex-wrap: wrap
+
+.contacts_gallery_item
+	width: 25%
+	background-color: #fff
+	border: 1px solid #e7e7e7
+	padding: 2px
+.contacts_gallery-link
+	display: block
+	height: 100%
+.contacts_gallery_img
+	width: 100%
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 992px)
+	.contacts_info_wrap
+		justify-content: space-between
+	.contacts_info_item
+		width: 30%
+
+
 
 @media only screen and (max-width:768px)
+	.contacts_info_wrap
+		flex-wrap: wrap
+	.contacts_info_item
+		width: 48%
+	.contacts_item
+		flex-wrap: wrap
+		padding-top: 30px
+	.contacts_item_img_wrap
+		width: 70%
+		margin: 0 auto 20px auto
+	.contacts_item_p
+		margin-bottom: 1rem
+	.contacts_item_phone-list
+		margin-top: 15px
+
+
 	.Shop__yshema-wrap
 		flex-wrap: wrap
 	.Shop__yshema-item
@@ -126,7 +315,6 @@
 	.Shop__yshema-item:nth-child(2)
 		margin-left: 0
 
-@media only screen and (max-width : 768px)
 	.shop__wrap
 		flex-direction: column
 		justify-content: space-between
@@ -138,7 +326,22 @@
 		&:hover,
 		&:visited
 			text-decoration: underline
+	.contacts_gallery_item
+		width: 50%
 
+@media only screen and (max-width : 520px)
+	.contacts_item_img_wrap
+		width: 100%
+		margin: 0 auto 20px auto
+	.contacts_info_wrap
+		margin-bottom: 30px
+	.contacts_info_item
+		width: 100%
+@media only screen and (max-width : 500px)
+	.contacts_phone_txt,
+	.contacts_phone_nam
+		display: block
+		width: 100%
 
 @media only screen and (max-width : 320px)
 	.shop__item
