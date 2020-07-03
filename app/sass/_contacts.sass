@@ -185,7 +185,8 @@
 
 
 .shop__adres, .shop__time
-	font-size: 1.1em
+	font-size: 1em
+	margin-bottom: 10px
 
 .shop__adres i, .shop__time i
 	margin-right: 10px
@@ -254,7 +255,15 @@
 		&:hover
 			color: #ff6d00
 
+.contacts_main
+	background-color: lighten($body, 1%)
+	border-radius: 3px
+	box-shadow: 0 0 3px rgba(122,122,122,.5)
+	padding: 15px
+	margin: 20px 0 30px 0
 
+.contacts_gallery
+	margin-top: 50px
 .contacts_gallery_wrap
 	display: flex
 	flex-wrap: wrap
@@ -269,8 +278,10 @@
 	height: 100%
 .contacts_gallery_img
 	width: 100%
-
-
+.contacts-list-back
+	display: inline-block
+	color: $darck
+	margin: 20px 0
 
 
 
@@ -303,7 +314,8 @@
 		margin-bottom: 1rem
 	.contacts_item_phone-list
 		margin-top: 15px
-
+	.shop__info_link
+		display: none
 
 	.Shop__yshema-wrap
 		flex-wrap: wrap
